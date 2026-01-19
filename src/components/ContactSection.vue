@@ -122,9 +122,9 @@
       </div>
     </div>
 
-    <div class="flex justify-between mt-4">
+    <div class="flex gap-6 mt-4">
       <!-- Social Media -->
-      <div class="card">
+      <div class="card flex-3">
         <div class="flex items-center space-x-3 mb-6">
           <div class="w-12 h-12 bg-ktm-orange/10 rounded-lg flex items-center justify-center">
             <Share2 class="w-6 h-6 text-ktm-orange" />
@@ -153,7 +153,7 @@
       </div>
 
       <!-- Map Placeholder -->
-      <div class="card p-0 overflow-hidden group cursor-pointer ml-6" style="width: 60vw">
+      <div class="card p-0 overflow-hidden group cursor-pointer flex-1">
         <div class="relative h-96 bg-ktm-dark">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.4267!2d79.9!3d7.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDAnMDAuMCJOIDc5wrA1NCcwMC4wIkU!5e0!3m2!1sen!2slk!4v1234567890"

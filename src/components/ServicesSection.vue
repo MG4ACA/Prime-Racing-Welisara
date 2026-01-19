@@ -17,7 +17,7 @@
     </div>
 
     <!-- Services Grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
       <div
         v-for="(service, index) in services"
         :key="index"
@@ -50,7 +50,7 @@
 <script setup>
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { AlertCircle, Check, Hammer, Palette, Shield, Wrench, Zap } from 'lucide-vue-next';
+import { Check, Palette, Shield, Wrench, Zap } from 'lucide-vue-next';
 import { onMounted, ref } from 'vue';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -85,23 +85,6 @@ const services = [
       'Bodykit installation',
       'Graphics design',
       'Seat customization',
-    ],
-  },
-  {
-    name: 'Repairs & Parts',
-    description: 'Expert repairs and genuine replacement parts.',
-    icon: Hammer,
-    features: ['Genuine parts', 'Expert technicians', 'Quick turnaround', 'Warranty on parts'],
-  },
-  {
-    name: 'Diagnostics & Inspection',
-    description: 'Advanced diagnostic services for your motorcycle.',
-    icon: AlertCircle,
-    features: [
-      'Computer diagnostics',
-      'Free inspection',
-      'Detailed reports',
-      'Preventive care plans',
     ],
   },
 ];
