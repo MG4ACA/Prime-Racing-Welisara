@@ -11,7 +11,7 @@ export const bikesData = [
     images: [
       'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80',
       'https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=1200&q=80',
-      'https://images.unsplash.com/photo-1613669175184-7c34b4b78f92?w=1200&q=80',
+      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80',
     ],
     specs: {
       engine: '373.3cc Single Cylinder',
@@ -51,7 +51,7 @@ export const bikesData = [
       'The Ninja 300 combines sporty performance with everyday practicality. Its parallel-twin engine delivers smooth power, while the aerodynamic fairings and aggressive styling turn heads wherever you go.',
     images: [
       'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=1200&q=80',
-      'https://images.unsplash.com/photo-1591067933962-4a4b8c78f5b0?w=1200&q=80',
+      'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=1200&q=80',
       'https://images.unsplash.com/photo-1558981852-426c6c22a060?w=1200&q=80',
     ],
     specs: {
@@ -132,9 +132,9 @@ export const bikesData = [
     description:
       'The MT-15 embodies Yamaha\'s "Dark Side of Japan" design philosophy. With its aggressive naked bike styling and high-revving engine, this machine is designed for riders who want to make a bold statement.',
     images: [
-      'https://images.unsplash.com/photo-1571058993562-927565980c09?w=1200&q=80',
       'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=1200&q=80',
       'https://images.unsplash.com/photo-1558981852-426c6c22a060?w=1200&q=80',
+      'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=1200&q=80',
     ],
     specs: {
       engine: '155cc Single Cylinder',
