@@ -44,7 +44,7 @@
     <div class="relative z-10 section-container text-center">
       <div class="space-y-8">
         <!-- Subtitle -->
-        <div class="flex items-center justify-center space-x-1 sm:space-x-2 text-ktm-orange">
+        <!-- <div class="flex items-center justify-center space-x-1 sm:space-x-2 text-ktm-orange">
           <div class="hidden sm:block w-12 h-0.5 bg-ktm-orange"></div>
           <Zap class="w-4 sm:w-5 h-4 sm:h-5" :stroke-width="2" />
           <span class="text-xs sm:text-sm font-semibold tracking-wider uppercase">
@@ -52,7 +52,7 @@
           </span>
           <Zap class="w-4 sm:w-5 h-4 sm:h-5" :stroke-width="2" />
           <div class="hidden sm:block w-12 h-0.5 bg-ktm-orange"></div>
-        </div>
+        </div> -->
 
         <!-- Main Heading with GSAP Letter Animation -->
         <h1 class="heading-1 text-white">
@@ -121,7 +121,7 @@
 
 <script setup>
 import { gsap } from 'gsap';
-import { ArrowRight, Calendar, ChevronDown, Zap } from 'lucide-vue-next';
+import { ArrowRight, Calendar, ChevronDown } from 'lucide-vue-next';
 import { onMounted, onUnmounted, ref } from 'vue';
 
 const headingRef = ref(null);
