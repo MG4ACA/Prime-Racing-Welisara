@@ -3,11 +3,13 @@
 ## 📋 Quick Start
 
 ### 1. Install Dependencies
+
 ```bash
 npm install
 ```
 
 ### 2. Run Development Server
+
 ```bash
 npm run dev
 ```
@@ -15,11 +17,13 @@ npm run dev
 Your site will be available at: **http://localhost:3000**
 
 ### 3. Build for Production
+
 ```bash
 npm run build
 ```
 
 ### 4. Preview Production Build
+
 ```bash
 npm run preview
 ```
@@ -29,20 +33,25 @@ npm run preview
 ## 🎨 Design Features Implemented
 
 ### ✨ Animations (GSAP)
+
 - **Hero Section**: Letter-by-letter stagger animation for "Making History"
 - **Parallax Effect**: Mouse-controlled parallax on hero background
 - **ScrollTrigger**: Bike cards fade & slide up on scroll (50px)
 - **Form Animation**: Staggered reveal for each input field
 - **WhatsApp Button**: Continuous ping + pop effect on click
+- **Bike Details Page**: Animated sections with stagger effects
 
 ### 🎯 Interactive Elements
+
 - **Bike Cards**: Hover effect with 5% image scale & glowing orange border
 - **Image Carousel**: Auto-rotate every 5 seconds with manual navigation
-- **Modal Specs**: Click "View Full Specs" to see detailed bike information
+- **Dedicated Specs Page**: Full-page view for complete bike specifications
 - **Smooth Scrolling**: Navigation links smoothly scroll to sections
 - **Responsive Navbar**: Transforms to mobile menu on small screens
+- **Routing**: Client-side navigation with Vue Router
 
 ### 🎨 Color Scheme
+
 - **Primary**: KTM Orange (#FF6600)
 - **Background**: Black (#000000)
 - **Dark Gray**: (#1a1a1a, #2d2d2d)
@@ -53,36 +62,43 @@ npm run preview
 ## 📱 Sections Overview
 
 ### 1. **Hero Section** (`HeroSection.vue`)
+
 - Animated "Making History" tagline
 - Mouse parallax background effect
 - CTA buttons (Explore Bikes, Book Test Ride)
 - Stats display (10+ years, 500+ bikes sold, 4 brands)
 
 ### 2. **About Section** (`AboutSection.vue`)
+
 - Company information
 - Featured brands (KTM, Kawasaki, Yamaha, Triumph)
 - 4 key features with icons
 
 ### 3. **Inventory Grid** (`InventoryGrid.vue`)
-- 5 featured motorcycles:
-  1. KTM Duke 390 (2026 Edition)
-  2. Kawasaki Ninja 300
-  3. Honda CB350 RS
-  4. Yamaha MT-15
-  5. Triumph Street Triple
-- Each bike has:
-  - 3 rotating images
-  - Engine specs & power
-  - Features list
-  - Detailed specs modal
 
-### 4. **Test Ride Form** (`TestRideForm.vue`)
+- 5 featured motorcycles with image carousels
+- Each bike card links to dedicated details page
+- Specs preview with engine, power, and features
+
+### 4. **Bike Details Page** (`BikeDetails.vue`) ⭐ NEW
+
+- Full-page view for each motorcycle
+- Image gallery with thumbnails
+- Complete technical specifications (10+ specs)
+- Features and highlights sections
+- "You Might Also Like" related bikes
+- Book test ride and WhatsApp inquiry CTAs
+- GSAP animations on scroll
+
+### 5. **Test Ride Form** (`TestRideForm.vue`)
+
 - Fields: Name, Phone, Email, Bike Model, Date, Time, Message
 - GSAP staggered field reveal on scroll
 - Form validation
 - Success modal after submission
 
-### 5. **Contact Section** (`ContactSection.vue`)
+### 6. **Contact Section** (`ContactSection.vue`)
+
 - Address: No. 47, Ragama Road, Welisara
 - Phone: +94 77 123 4567, +94 11 234 5678
 - Email: info@primeracingwelisara.lk
@@ -90,13 +106,15 @@ npm run preview
 - Social media links (Facebook, Instagram, Twitter, YouTube)
 - Google Maps embed
 
-### 6. **Footer** (`Footer.vue`)
+### 7. **Footer** (`Footer.vue`)
+
 - Brand info & quick links
 - Contact information
 - Social media icons
 - Copyright notice
 
-### 7. **WhatsApp Button** (`WhatsAppButton.vue`)
+### 8. **WhatsApp Button** (`WhatsAppButton.vue`)
+
 - Fixed floating button (bottom-right)
 - Continuous ping animation
 - Pop effect on click
@@ -107,34 +125,52 @@ npm run preview
 ## 🛠️ Customization Guide
 
 ### Change WhatsApp Number
+
 **File**: `src/components/WhatsAppButton.vue`
+
 ```javascript
-const whatsappNumber = '94771234567' // Change this
+const whatsappNumber = '94771234567'; // Change this
 ```
 
 ### Update Contact Information
+
 **File**: `src/components/ContactSection.vue`
+
 ```javascript
 // Update phone numbers, emails, business hours
 ```
 
 ### Add/Remove Bikes
-**File**: `src/components/InventoryGrid.vue`
+
+**File**: `src/data/bikes.js`
+
 ```javascript
-const bikes = [
+export const bikesData = [
   // Add or modify bike objects here
   {
+    id: 'bike-slug',           // Unique ID for URL
     name: 'Your Bike Name',
+    year: '2026',
     brand: 'Brand',
+    brandColor: 'ktm-orange',  // Tailwind color class
+    tagline: 'Your Tagline',
+    description: 'Full description...',
     images: ['url1', 'url2', 'url3'],
-    specs: { ... },
-    features: [ ... ]
+    specs: {
+      engine: '...',
+      power: '...',
+      // Add more specs
+    },
+    features: [ ... ],
+    highlights: [ ... ]
   }
 ]
 ```
 
 ### Change Color Theme
+
 **File**: `tailwind.config.js`
+
 ```javascript
 colors: {
   'ktm-orange': '#FF6600', // Change primary color
@@ -143,12 +179,14 @@ colors: {
 ```
 
 ### Modify Business Hours
+
 **File**: `src/components/ContactSection.vue`
+
 ```javascript
 const businessHours = {
-  'Monday': '9:00 AM - 7:00 PM',
+  Monday: '9:00 AM - 7:00 PM',
   // Modify as needed
-}
+};
 ```
 
 ---
@@ -160,6 +198,13 @@ prime-racing-walisara/
 ├── public/
 │   └── favicon.svg
 ├── src/
+│   ├── views/
+│   │   ├── HomePage.vue            # Main landing page
+│   │   └── BikeDetails.vue         # Individual bike page
+│   ├── data/
+│   │   └── bikes.js                # Shared bikes data
+│   ├── router/
+│   │   └── index.js                # Vue Router config
 │   ├── components/
 │   │   ├── Navbar.vue              # Navigation bar
 │   │   ├── HeroSection.vue         # Hero with animations
@@ -185,42 +230,45 @@ prime-racing-walisara/
 ## 🎭 Animation Details
 
 ### Hero Section Letter Animation
+
 ```javascript
 gsap.to(headingElement.children, {
   opacity: 1,
   y: 0,
   duration: 0.8,
-  stagger: 0.05,      // 50ms delay between letters
+  stagger: 0.05, // 50ms delay between letters
   ease: 'power3.out',
-  delay: 0.3
-})
+  delay: 0.3,
+});
 ```
 
 ### Bike Card ScrollTrigger
+
 ```javascript
 ScrollTrigger.create({
   trigger: cardRef.value,
-  start: 'top 80%',    // Trigger when card is 80% in viewport
+  start: 'top 80%', // Trigger when card is 80% in viewport
   onEnter: () => {
     gsap.to(cardRef.value, {
       opacity: 1,
-      y: 0,              // Slide up 50px
+      y: 0, // Slide up 50px
       duration: 0.8,
-      delay: index * 0.1  // Stagger by index
-    })
-  }
-})
+      delay: index * 0.1, // Stagger by index
+    });
+  },
+});
 ```
 
 ### Form Field Stagger
+
 ```javascript
 gsap.to(field.value, {
   opacity: 1,
   y: 0,
   duration: 0.6,
   ease: 'power3.out',
-  delay: index * 0.1   // Each field animates 100ms after previous
-})
+  delay: index * 0.1, // Each field animates 100ms after previous
+});
 ```
 
 ---
@@ -231,7 +279,9 @@ gsap.to(field.value, {
 - **Tablet**: 768px - 1024px
 - **Desktop**: > 1024px
 
-All sections are fully responsive and tested on mobile devices.
+All Vue Router 4\*\*: Client-side routing for multi-page navigation
+
+- \*\*sections are fully responsive and tested on mobile devices.
 
 ---
 
@@ -248,17 +298,20 @@ All sections are fully responsive and tested on mobile devices.
 ## 🚀 Deployment
 
 ### Option 1: Netlify
+
 1. Push to GitHub
 2. Connect repo to Netlify
 3. Build command: `npm run build`
 4. Publish directory: `dist`
 
 ### Option 2: Vercel
+
 1. Install Vercel CLI: `npm i -g vercel`
 2. Run: `vercel`
 3. Follow prompts
 
 ### Option 3: Traditional Hosting
+
 1. Run: `npm run build`
 2. Upload `dist/` folder to your hosting
 3. Point domain to `dist/index.html`
@@ -278,12 +331,15 @@ All sections are fully responsive and tested on mobile devices.
 ## 🐛 Troubleshooting
 
 ### Issue: Animations not working
+
 **Solution**: Check browser console for GSAP import errors
 
 ### Issue: Styles not applying
+
 **Solution**: Run `npm run build` to regenerate Tailwind CSS
 
 ### Issue: WhatsApp not opening
+
 **Solution**: Verify `whatsappNumber` format (no + or spaces)
 
 ---
@@ -291,6 +347,7 @@ All sections are fully responsive and tested on mobile devices.
 ## 📞 Support
 
 For questions or customization help:
+
 - Email: dev@primeracingwelisara.lk
 - Phone: +94 77 123 4567
 

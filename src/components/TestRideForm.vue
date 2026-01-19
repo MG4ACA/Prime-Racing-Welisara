@@ -8,26 +8,25 @@
           <span class="text-sm font-semibold tracking-wider uppercase">Book a Test Ride</span>
         </div>
         <h2 class="heading-2 text-white mb-4">
-          Experience the <span class="gradient-text">Thrill</span>
+          Experience the
+          <span class="gradient-text">Thrill</span>
         </h2>
         <p class="text-gray-400">
           Schedule a test ride and feel the power of your dream motorcycle
         </p>
       </div>
-      
+
       <!-- Form -->
-      <form 
+      <form
         @submit.prevent="handleSubmit"
-        class="bg-ktm-gray rounded-xl p-8 border border-gray-800 space-y-6"
+        class="bg-ktm-gray rounded-xl p-6 border border-gray-800 grid grid-cols-2 gap-4"
       >
         <!-- Name Field -->
         <div ref="field1" class="form-field">
-          <label for="name" class="block text-sm font-semibold text-white mb-2">
-            Full Name *
-          </label>
+          <label for="name" class="block text-sm font-semibold text-white mb-2">Full Name *</label>
           <div class="relative">
             <User class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
-            <input 
+            <input
               id="name"
               v-model="formData.name"
               type="text"
@@ -37,7 +36,7 @@
             />
           </div>
         </div>
-        
+
         <!-- Phone Field -->
         <div ref="field2" class="form-field">
           <label for="phone" class="block text-sm font-semibold text-white mb-2">
@@ -45,7 +44,7 @@
           </label>
           <div class="relative">
             <Phone class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
-            <input 
+            <input
               id="phone"
               v-model="formData.phone"
               type="tel"
@@ -55,7 +54,7 @@
             />
           </div>
         </div>
-        
+
         <!-- Email Field -->
         <div ref="field3" class="form-field">
           <label for="email" class="block text-sm font-semibold text-white mb-2">
@@ -63,7 +62,7 @@
           </label>
           <div class="relative">
             <Mail class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
-            <input 
+            <input
               id="email"
               v-model="formData.email"
               type="email"
@@ -73,7 +72,7 @@
             />
           </div>
         </div>
-        
+
         <!-- Bike Model Selection -->
         <div ref="field4" class="form-field">
           <label for="bike" class="block text-sm font-semibold text-white mb-2">
@@ -81,23 +80,23 @@
           </label>
           <div class="relative">
             <Bike class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
-            <select 
+            <select
               id="bike"
               v-model="formData.bike"
               required
               class="w-full pl-11 pr-4 py-3 bg-ktm-dark border border-gray-800 rounded-lg text-white focus:border-ktm-orange focus:outline-none focus:ring-2 focus:ring-ktm-orange/20 transition-all appearance-none cursor-pointer"
             >
               <option value="" disabled>Select a motorcycle</option>
-              <option value="KTM Duke 390">KTM Duke 390 (2026 Edition)</option>
-              <option value="Kawasaki Ninja 300">Kawasaki Ninja 300</option>
-              <option value="Honda CB350 RS">Honda CB350 RS</option>
-              <option value="Yamaha MT-15">Yamaha MT-15</option>
-              <option value="Triumph Street Triple">Triumph Street Triple</option>
+              <option v-for="bike in bikes" :key="bike.id" :value="bike.name">
+                {{ bike.name }} ({{ bike.year }})
+              </option>
             </select>
-            <ChevronDown class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
+            <ChevronDown
+              class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none"
+            />
           </div>
         </div>
-        
+
         <!-- Date Field -->
         <div ref="field5" class="form-field">
           <label for="date" class="block text-sm font-semibold text-white mb-2">
@@ -105,7 +104,7 @@
           </label>
           <div class="relative">
             <CalendarDays class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
-            <input 
+            <input
               id="date"
               v-model="formData.date"
               type="date"
@@ -115,7 +114,7 @@
             />
           </div>
         </div>
-        
+
         <!-- Time Field -->
         <div ref="field6" class="form-field">
           <label for="time" class="block text-sm font-semibold text-white mb-2">
@@ -123,7 +122,7 @@
           </label>
           <div class="relative">
             <Clock class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
-            <select 
+            <select
               id="time"
               v-model="formData.time"
               required
@@ -136,16 +135,18 @@
               <option value="04:00 PM">04:00 PM</option>
               <option value="06:00 PM">06:00 PM</option>
             </select>
-            <ChevronDown class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
+            <ChevronDown
+              class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none"
+            />
           </div>
         </div>
-        
+
         <!-- Message Field -->
-        <div ref="field7" class="form-field">
+        <div ref="field7" class="form-field col-span-2">
           <label for="message" class="block text-sm font-semibold text-white mb-2">
             Additional Notes (Optional)
           </label>
-          <textarea 
+          <textarea
             id="message"
             v-model="formData.message"
             rows="4"
@@ -153,10 +154,10 @@
             class="w-full px-4 py-3 bg-ktm-dark border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:border-ktm-orange focus:outline-none focus:ring-2 focus:ring-ktm-orange/20 transition-all resize-none"
           ></textarea>
         </div>
-        
+
         <!-- Submit Button -->
-        <div ref="field8" class="form-field">
-          <button 
+        <div ref="field8" class="form-field col-span-2">
+          <button
             type="submit"
             :disabled="isSubmitting"
             class="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
@@ -166,7 +167,7 @@
           </button>
         </div>
       </form>
-      
+
       <!-- Success Message -->
       <transition
         enter-active-class="transition duration-200 ease-out"
@@ -176,24 +177,24 @@
         leave-from-class="opacity-100 scale-100"
         leave-to-class="opacity-0 scale-95"
       >
-        <div 
+        <div
           v-if="showSuccess"
           class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
         >
-          <div class="bg-ktm-gray rounded-xl p-8 max-w-md w-full border border-green-500 text-center">
-            <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div
+            class="bg-ktm-gray rounded-xl p-8 max-w-md w-full border border-green-500 text-center"
+          >
+            <div
+              class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
               <CheckCircle class="w-10 h-10 text-green-500" />
             </div>
             <h3 class="text-2xl font-bold text-white mb-2">Booking Confirmed!</h3>
             <p class="text-gray-400 mb-6">
-              We've received your test ride request. Our team will contact you shortly to confirm the details.
+              We've received your test ride request. Our team will contact you shortly to confirm
+              the details.
             </p>
-            <button 
-              @click="closeSuccess"
-              class="btn-primary w-full"
-            >
-              Close
-            </button>
+            <button @click="closeSuccess" class="btn-primary w-full">Close</button>
           </div>
         </div>
       </transition>
@@ -202,21 +203,35 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
-import { Calendar, User, Phone, Mail, Bike, CalendarDays, Clock, ChevronDown, Send, CheckCircle } from 'lucide-vue-next'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import {
+  Bike,
+  Calendar,
+  CalendarDays,
+  CheckCircle,
+  ChevronDown,
+  Clock,
+  Mail,
+  Phone,
+  Send,
+  User,
+} from 'lucide-vue-next';
+import { computed, onMounted, ref } from 'vue';
+import { bikesData } from '../data/bikes';
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
-const field1 = ref(null)
-const field2 = ref(null)
-const field3 = ref(null)
-const field4 = ref(null)
-const field5 = ref(null)
-const field6 = ref(null)
-const field7 = ref(null)
-const field8 = ref(null)
+const bikes = bikesData;
+
+const field1 = ref(null);
+const field2 = ref(null);
+const field3 = ref(null);
+const field4 = ref(null);
+const field5 = ref(null);
+const field6 = ref(null);
+const field7 = ref(null);
+const field8 = ref(null);
 
 const formData = ref({
   name: '',
@@ -225,28 +240,28 @@ const formData = ref({
   bike: '',
   date: '',
   time: '',
-  message: ''
-})
+  message: '',
+});
 
-const isSubmitting = ref(false)
-const showSuccess = ref(false)
+const isSubmitting = ref(false);
+const showSuccess = ref(false);
 
 const minDate = computed(() => {
-  const today = new Date()
-  today.setDate(today.getDate() + 1) // Minimum tomorrow
-  return today.toISOString().split('T')[0]
-})
+  const today = new Date();
+  today.setDate(today.getDate() + 1); // Minimum tomorrow
+  return today.toISOString().split('T')[0];
+});
 
 const handleSubmit = async () => {
-  isSubmitting.value = true
-  
+  isSubmitting.value = true;
+
   // Simulate API call
-  await new Promise(resolve => setTimeout(resolve, 1500))
-  
+  await new Promise((resolve) => setTimeout(resolve, 1500));
+
   // Show success message
-  showSuccess.value = true
-  isSubmitting.value = false
-  
+  showSuccess.value = true;
+  isSubmitting.value = false;
+
   // Reset form
   formData.value = {
     name: '',
@@ -255,25 +270,25 @@ const handleSubmit = async () => {
     bike: '',
     date: '',
     time: '',
-    message: ''
-  }
-}
+    message: '',
+  };
+};
 
 const closeSuccess = () => {
-  showSuccess.value = false
-}
+  showSuccess.value = false;
+};
 
 onMounted(() => {
-  const fields = [field1, field2, field3, field4, field5, field6, field7, field8]
-  
+  const fields = [field1, field2, field3, field4, field5, field6, field7, field8];
+
   fields.forEach((field, index) => {
     if (field.value) {
       // Set initial state
       gsap.set(field.value, {
         opacity: 0,
-        y: 30
-      })
-      
+        y: 30,
+      });
+
       // Animate on scroll
       ScrollTrigger.create({
         trigger: field.value,
@@ -284,12 +299,12 @@ onMounted(() => {
             y: 0,
             duration: 0.6,
             ease: 'power3.out',
-            delay: index * 0.1
-          })
+            delay: index * 0.1,
+          });
         },
-        once: true
-      })
+        once: true,
+      });
     }
-  })
-})
+  });
+});
 </script>
