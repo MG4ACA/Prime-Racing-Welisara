@@ -43,19 +43,19 @@
               class="flex items-center space-x-2 bg-ktm-gray p-3 rounded-lg border border-gray-800"
             >
               <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span class="text-green-500 font-semibold">Kawasaki</span>
+              <span class="text-ktm-orange font-semibold">Kawasaki</span>
             </div>
             <div
               class="flex items-center space-x-2 bg-ktm-gray p-3 rounded-lg border border-gray-800"
             >
               <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <span class="text-blue-500 font-semibold">Yamaha</span>
+              <span class="text-ktm-orange font-semibold">Yamaha</span>
             </div>
             <div
               class="flex items-center space-x-2 bg-ktm-gray p-3 rounded-lg border border-gray-800"
             >
               <div class="w-2 h-2 bg-red-500 rounded-full"></div>
-              <span class="text-red-500 font-semibold">Triumph</span>
+              <span class="text-ktm-orange font-semibold">Triumph</span>
             </div>
           </div>
         </div>

@@ -77,9 +77,9 @@
           <h4 class="text-white font-semibold mb-4">Our Brands</h4>
           <ul class="space-y-2">
             <li class="text-ktm-orange text-sm">KTM</li>
-            <li class="text-green-500 text-sm">Kawasaki</li>
-            <li class="text-blue-500 text-sm">Yamaha</li>
-            <li class="text-red-500 text-sm">Triumph</li>
+            <li class="text-ktm-orange text-sm">Kawasaki</li>
+            <li class="text-ktm-orange text-sm">Yamaha</li>
+            <li class="text-ktm-orange text-sm">Triumph</li>
           </ul>
         </div>
 

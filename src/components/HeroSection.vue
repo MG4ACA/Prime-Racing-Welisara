@@ -66,11 +66,11 @@
           Experience the thrill of premium
           <span class="text-ktm-orange font-semibold">KTM</span>
           ,
-          <span class="text-green-500 font-semibold">Kawasaki</span>
+          <span class="text-ktm-orange font-semibold">Kawasaki</span>
           ,
-          <span class="text-blue-500 font-semibold">Yamaha</span>
+          <span class="text-ktm-orange font-semibold">Yamaha</span>
           , and
-          <span class="text-red-500 font-semibold">Triumph</span>
+          <span class="text-ktm-orange font-semibold">Triumph</span>
           motorcycles
         </p>
 

@@ -112,7 +112,7 @@
               <span class="text-gray-400">{{ day }}</span>
               <span
                 class="font-semibold"
-                :class="hours === 'Closed' ? 'text-red-500' : 'text-white'"
+                :class="hours === 'Closed' ? 'text-ktm-orange' : 'text-white'"
               >
                 {{ hours }}
               </span>
