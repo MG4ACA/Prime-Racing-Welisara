@@ -12,8 +12,7 @@
 
       <!-- Brand Badge -->
       <div
-        class="absolute top-4 left-4 z-20 px-3 py-1 rounded-full text-xs font-semibold bg-black/50 backdrop-blur-sm border"
-        :class="`border-${bike.brandColor} text-${bike.brandColor}`"
+        class="absolute top-4 left-4 z-20 px-3 py-1 rounded-full text-xs font-semibold bg-black/50 backdrop-blur-sm border border-jl-green text-jl-green"
       >
         {{ bike.brand }}
       </div>
