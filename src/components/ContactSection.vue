@@ -22,16 +22,16 @@
         <div class="card group cursor-pointer">
           <div class="flex items-start space-x-4">
             <div
-              class="w-12 h-12 bg-jl-green/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-jl-green/20 transition-colors duration-300"
+              class="w-12 h-12 bg-ktm-orange/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-ktm-orange/20 transition-colors duration-300"
             >
-              <MapPin class="w-6 h-6 text-jl-green" />
+              <MapPin class="w-6 h-6 text-ktm-orange" />
             </div>
             <div>
               <h3 class="text-lg font-semibold text-white mb-2">Address</h3>
               <p class="text-gray-400">
-                No. 154, Puttalam Road
+                No. 47, Ragama Road
                 <br />
-                Kurunegala, Sri Lanka
+                Welisara, Sri Lanka
               </p>
             </div>
           </div>
@@ -41,24 +41,24 @@
         <div class="card group cursor-pointer">
           <div class="flex items-start space-x-4">
             <div
-              class="w-12 h-12 bg-jl-green/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-jl-green/20 transition-colors duration-300"
+              class="w-12 h-12 bg-ktm-orange/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-ktm-orange/20 transition-colors duration-300"
             >
-              <Phone class="w-6 h-6 text-jl-green" />
+              <Phone class="w-6 h-6 text-ktm-orange" />
             </div>
             <div>
               <h3 class="text-lg font-semibold text-white mb-2">Phone</h3>
               <a
-                href="tel:+94372228220"
-                class="text-gray-400 hover:text-jl-green transition-colors"
+                href="tel:+94771234567"
+                class="text-gray-400 hover:text-ktm-orange transition-colors"
               >
-                0372 228 220
+                +94 77 123 4567
               </a>
               <br />
               <a
-                href="tel:+94717910091"
-                class="text-gray-400 hover:text-jl-green transition-colors"
+                href="tel:+94112345678"
+                class="text-gray-400 hover:text-ktm-orange transition-colors"
               >
-                071 791 0091 (WhatsApp)
+                +94 11 234 5678
               </a>
             </div>
           </div>
@@ -68,24 +68,24 @@
         <div class="card group cursor-pointer">
           <div class="flex items-start space-x-4">
             <div
-              class="w-12 h-12 bg-jl-green/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-jl-green/20 transition-colors duration-300"
+              class="w-12 h-12 bg-ktm-orange/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-ktm-orange/20 transition-colors duration-300"
             >
-              <Mail class="w-6 h-6 text-jl-green" />
+              <Mail class="w-6 h-6 text-ktm-orange" />
             </div>
             <div>
               <h3 class="text-lg font-semibold text-white mb-2">Email</h3>
               <a
-                href="mailto:jlracing16@gmail.com"
-                class="text-gray-400 hover:text-jl-green transition-colors"
+                href="mailto:info@primeracingwelisara.lk"
+                class="text-gray-400 hover:text-ktm-orange transition-colors"
               >
-                jlracing16@gmail.com
+                info@primeracingwelisara.lk
               </a>
               <br />
               <a
-                href="mailto:info@jlracing.lk"
-                class="text-gray-400 hover:text-jl-green transition-colors"
+                href="mailto:sales@primeracingwelisara.lk"
+                class="text-gray-400 hover:text-ktm-orange transition-colors"
               >
-                info@jlracing.lk
+                sales@primeracingwelisara.lk
               </a>
             </div>
           </div>
@@ -112,7 +112,7 @@
               <span class="text-gray-400">{{ day }}</span>
               <span
                 class="font-semibold"
-                :class="hours === 'Closed' ? 'text-jl-green' : 'text-white'"
+                :class="hours === 'Closed' ? 'text-ktm-orange' : 'text-white'"
               >
                 {{ hours }}
               </span>
@@ -126,8 +126,8 @@
       <!-- Social Media -->
       <div class="card flex-3">
         <div class="flex items-center space-x-3 mb-6">
-          <div class="w-12 h-12 bg-jl-green/10 rounded-lg flex items-center justify-center">
-            <Share2 class="w-6 h-6 text-jl-green" />
+          <div class="w-12 h-12 bg-ktm-orange/10 rounded-lg flex items-center justify-center">
+            <Share2 class="w-6 h-6 text-ktm-orange" />
           </div>
           <h3 class="text-xl font-semibold text-white">Follow Us</h3>
         </div>
@@ -139,11 +139,11 @@
             :href="social.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center space-x-3 p-3 bg-jl-dark rounded-lg border border-gray-800 hover:border-jl-green hover:bg-jl-green/5 transition-all duration-300 group"
+            class="flex items-center space-x-3 p-3 bg-ktm-dark rounded-lg border border-gray-800 hover:border-ktm-orange hover:bg-ktm-orange/5 transition-all duration-300 group"
           >
             <component
               :is="social.icon"
-              class="w-5 h-5 text-gray-400 group-hover:text-jl-green transition-colors"
+              class="w-5 h-5 text-gray-400 group-hover:text-ktm-orange transition-colors"
             />
             <span class="text-gray-400 group-hover:text-white transition-colors">
               {{ social.name }}
@@ -154,7 +154,7 @@
 
       <!-- Map Placeholder -->
       <div class="card p-0 overflow-hidden group cursor-pointer flex-1">
-        <div class="relative h-96 bg-jl-dark">
+        <div class="relative h-96 bg-ktm-dark">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.4267!2d79.9!3d7.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDAnMDAuMCJOIDc5wrA1NCcwMC4wIkU!5e0!3m2!1sen!2slk!4v1234567890"
             class="w-full h-full border-0 group-hover:scale-105 transition-transform duration-500"
@@ -195,22 +195,22 @@ const socialLinks = [
   {
     name: 'Facebook',
     icon: Facebook,
-    url: 'https://facebook.com/jlracingkurunegala',
+    url: 'https://facebook.com/primeracingwelisara',
   },
   {
     name: 'Instagram',
     icon: Instagram,
-    url: 'https://instagram.com/jlracingkurunegala',
+    url: 'https://instagram.com/primeracingwelisara',
   },
   {
     name: 'Twitter',
     icon: Twitter,
-    url: 'https://twitter.com/jlracing_kng',
+    url: 'https://twitter.com/primeracingwel',
   },
   {
     name: 'YouTube',
     icon: Youtube,
-    url: 'https://youtube.com/@jlracingkurunegala',
+    url: 'https://youtube.com/@primeracingwelisara',
   },
 ];
 </script>

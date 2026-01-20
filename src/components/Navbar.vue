@@ -9,7 +9,7 @@
         <router-link to="/" class="flex items-center space-x-3 group">
           <img
             src="/logo.png"
-            alt="JL Racing Logo"
+            alt="Prime Racing Logo"
             class="h-20 w-auto transform group-hover:scale-110 transition-transform duration-300 rounded-lg"
           />
           <div>
@@ -24,7 +24,7 @@
             v-for="item in menuItems"
             :key="item.id"
             :to="item.route"
-            class="text-gray-300 hover:text-jl-green transition-colors duration-300 font-medium"
+            class="text-gray-300 hover:text-ktm-orange transition-colors duration-300 font-medium"
           >
             {{ item.label }}
           </router-link>
@@ -48,7 +48,7 @@
       leave-from-class="opacity-100 translate-y-0"
       leave-to-class="opacity-0 -translate-y-4"
     >
-      <div v-if="mobileMenuOpen" class="md:hidden bg-jl-dark border-t border-gray-800">
+      <div v-if="mobileMenuOpen" class="md:hidden bg-ktm-dark border-t border-gray-800">
         <div class="section-container py-4 space-y-3">
           <router-link
             v-for="item in menuItems"

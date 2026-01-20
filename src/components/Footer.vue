@@ -5,15 +5,15 @@
         <!-- Brand -->
         <div class="space-y-4">
           <div class="flex items-center space-x-3">
-            <img src="/logo.png" alt="JL Racing Logo" class="h-10 w-auto rounded-lg" />
+            <img src="/logo.png" alt="Prime Racing Logo" class="h-10 w-auto rounded-lg" />
             <div>
               <h3 class="text-lg font-display font-bold text-white">JL Racing</h3>
               <p class="text-xs text-jl-green">Kurunegala</p>
             </div>
           </div>
           <p class="text-sm text-gray-400">
-            Your trusted partner for brand new imported motorcycles in Sri Lanka. The Beast Returns
-            - Louder, Faster, Meaner.
+            Your trusted partner for premium motorcycles in Sri Lanka. Making history, one ride at a
+            time.
           </p>
         </div>
 
@@ -24,7 +24,7 @@
             <li>
               <router-link
                 to="/"
-                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
+                class="text-gray-400 hover:text-ktm-orange transition-colors text-sm"
               >
                 Home
               </router-link>
@@ -32,7 +32,7 @@
             <li>
               <router-link
                 to="/about"
-                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
+                class="text-gray-400 hover:text-ktm-orange transition-colors text-sm"
               >
                 About Us
               </router-link>
@@ -40,7 +40,7 @@
             <li>
               <router-link
                 to="/inventory"
-                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
+                class="text-gray-400 hover:text-ktm-orange transition-colors text-sm"
               >
                 Inventory
               </router-link>
@@ -48,7 +48,7 @@
             <li>
               <router-link
                 to="/services"
-                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
+                class="text-gray-400 hover:text-ktm-orange transition-colors text-sm"
               >
                 Services
               </router-link>
@@ -56,7 +56,7 @@
             <li>
               <router-link
                 to="/test-ride"
-                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
+                class="text-gray-400 hover:text-ktm-orange transition-colors text-sm"
               >
                 Book Test Ride
               </router-link>
@@ -64,7 +64,7 @@
             <li>
               <router-link
                 to="/contact"
-                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
+                class="text-gray-400 hover:text-ktm-orange transition-colors text-sm"
               >
                 Contact
               </router-link>
@@ -76,11 +76,10 @@
         <div>
           <h4 class="text-white font-semibold mb-4">Our Brands</h4>
           <ul class="space-y-2">
-            <li class="text-jl-green text-sm">KTM</li>
-            <li class="text-jl-green text-sm">Kawasaki</li>
-            <li class="text-jl-green text-sm">Yamaha</li>
-            <li class="text-jl-green text-sm">Honda</li>
-            <li class="text-jl-green text-sm">Suzuki</li>
+            <li class="text-ktm-orange text-sm">KTM</li>
+            <li class="text-ktm-orange text-sm">Kawasaki</li>
+            <li class="text-ktm-orange text-sm">Yamaha</li>
+            <li class="text-ktm-orange text-sm">Triumph</li>
           </ul>
         </div>
 
@@ -89,25 +88,25 @@
           <h4 class="text-white font-semibold mb-4">Contact Info</h4>
           <ul class="space-y-3">
             <li class="flex items-start space-x-2">
-              <MapPin class="w-4 h-4 text-jl-green mt-0.5 flex-shrink-0" />
-              <span class="text-gray-400 text-sm">No. 154, Puttalam Road, Kurunegala</span>
+              <MapPin class="w-4 h-4 text-ktm-orange mt-0.5 flex-shrink-0" />
+              <span class="text-gray-400 text-sm">No. 47, Ragama Road, Welisara</span>
             </li>
             <li class="flex items-center space-x-2">
-              <Phone class="w-4 h-4 text-jl-green flex-shrink-0" />
+              <Phone class="w-4 h-4 text-ktm-orange flex-shrink-0" />
               <a
-                href="tel:+94372228220"
-                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
+                href="tel:+94771234567"
+                class="text-gray-400 hover:text-ktm-orange transition-colors text-sm"
               >
-                0372 228 220
+                +94 77 123 4567
               </a>
             </li>
             <li class="flex items-center space-x-2">
-              <Mail class="w-4 h-4 text-jl-green flex-shrink-0" />
+              <Mail class="w-4 h-4 text-ktm-orange flex-shrink-0" />
               <a
-                href="mailto:jlracing16@gmail.com"
-                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
+                href="mailto:info@primeracingwelisara.lk"
+                class="text-gray-400 hover:text-ktm-orange transition-colors text-sm"
               >
-                jlracing16@gmail.com
+                info@primeracingwelisara.lk
               </a>
             </li>
           </ul>
@@ -154,22 +153,22 @@ const socialLinks = [
   {
     name: 'Facebook',
     icon: Facebook,
-    url: 'https://facebook.com/jlracingkurunegala',
+    url: 'https://facebook.com/primeracingwelisara',
   },
   {
     name: 'Instagram',
     icon: Instagram,
-    url: 'https://instagram.com/jlracingkurunegala',
+    url: 'https://instagram.com/primeracingwelisara',
   },
   {
     name: 'Twitter',
     icon: Twitter,
-    url: 'https://twitter.com/jlracing_kng',
+    url: 'https://twitter.com/primeracingwel',
   },
   {
     name: 'YouTube',
     icon: Youtube,
-    url: 'https://youtube.com/@jlracingkurunegala',
+    url: 'https://youtube.com/@primeracingwelisara',
   },
 ];
 </script>

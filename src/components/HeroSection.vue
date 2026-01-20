@@ -6,7 +6,7 @@
       <div
         class="absolute inset-0"
         style="
-          background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300BC00' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);
+          background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FF6600' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);
         "
       ></div>
     </div>
@@ -33,7 +33,9 @@
         @click="currentImageIndex = index"
         :class="[
           'w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all duration-300',
-          currentImageIndex === index ? 'bg-jl-green sm:w-8 w-6' : 'bg-gray-400 hover:bg-gray-300',
+          currentImageIndex === index
+            ? 'bg-ktm-orange sm:w-8 w-6'
+            : 'bg-gray-400 hover:bg-gray-300',
         ]"
       ></button>
     </div>
@@ -42,14 +44,14 @@
     <div class="relative z-10 section-container text-center">
       <div class="space-y-8">
         <!-- Subtitle -->
-        <!-- <div class="flex items-center justify-center space-x-1 sm:space-x-2 text-jl-green">
-          <div class="hidden sm:block w-12 h-0.5 bg-jl-green"></div>
+        <!-- <div class="flex items-center justify-center space-x-1 sm:space-x-2 text-ktm-orange">
+          <div class="hidden sm:block w-12 h-0.5 bg-ktm-orange"></div>
           <Zap class="w-4 sm:w-5 h-4 sm:h-5" :stroke-width="2" />
           <span class="text-xs sm:text-sm font-semibold tracking-wider uppercase">
             Premium Motorcycles
           </span>
           <Zap class="w-4 sm:w-5 h-4 sm:h-5" :stroke-width="2" />
-          <div class="hidden sm:block w-12 h-0.5 bg-jl-green"></div>
+          <div class="hidden sm:block w-12 h-0.5 bg-ktm-orange"></div>
         </div> -->
 
         <!-- Main Heading with GSAP Letter Animation -->
@@ -61,10 +63,15 @@
         <p
           class="text-sm sm:text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4"
         >
-          <span class="text-jl-green font-bold">Louder. Faster. Meaner.</span>
-          <br />
-          Imported Brand New Bikes with a
-          <span class="text-jl-green font-semibold">2-Year Warranty</span>
+          Experience the thrill of premium
+          <span class="text-ktm-orange font-semibold">KTM</span>
+          ,
+          <span class="text-ktm-orange font-semibold">Kawasaki</span>
+          ,
+          <span class="text-ktm-orange font-semibold">Yamaha</span>
+          , and
+          <span class="text-ktm-orange font-semibold">Triumph</span>
+          motorcycles
         </p>
 
         <!-- CTA Buttons -->
@@ -90,15 +97,15 @@
         <!-- Stats -->
         <div class="grid grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto pt-6 sm:pt-12 px-4">
           <div class="text-center">
-            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-jl-green">10+</div>
+            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-ktm-orange">10+</div>
             <div class="text-xs sm:text-sm text-gray-400 mt-1 sm:mt-2">Years Exp</div>
           </div>
           <div class="text-center border-x border-gray-800">
-            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-jl-green">500+</div>
+            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-ktm-orange">500+</div>
             <div class="text-xs sm:text-sm text-gray-400 mt-1 sm:mt-2">Bikes Sold</div>
           </div>
           <div class="text-center">
-            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-jl-green">5</div>
+            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-ktm-orange">4</div>
             <div class="text-xs sm:text-sm text-gray-400 mt-1 sm:mt-2">Brands</div>
           </div>
         </div>
@@ -164,8 +171,8 @@ onMounted(() => {
   // Start carousel
   startCarousel();
 
-  // Letter-by-letter animation for "The Beast Returns"
-  const text = 'The Beast Returns';
+  // Letter-by-letter animation for "Making History"
+  const text = 'Making History';
   const headingElement = headingRef.value;
 
   if (headingElement) {

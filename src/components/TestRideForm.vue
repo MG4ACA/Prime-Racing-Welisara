@@ -19,7 +19,7 @@
       <!-- Form -->
       <form
         @submit.prevent="handleSubmit"
-        class="bg-jl-gray rounded-xl p-6 border border-gray-800 grid grid-cols-2 gap-4"
+        class="bg-ktm-gray rounded-xl p-6 border border-gray-800 grid grid-cols-2 gap-4"
       >
         <!-- Name Field -->
         <div ref="field1" class="form-field">
@@ -182,12 +182,12 @@
           class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
         >
           <div
-            class="bg-jl-gray rounded-xl p-8 max-w-md w-full border border-green-500 text-center"
+            class="bg-ktm-gray rounded-xl p-8 max-w-md w-full border border-green-500 text-center"
           >
             <div
               class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4"
             >
-              <CheckCircle class="w-10 h-10 text-jl-green" />
+              <CheckCircle class="w-10 h-10 text-ktm-orange" />
             </div>
             <h3 class="text-2xl font-bold text-white mb-2">Booking Confirmed!</h3>
             <p class="text-gray-400 mb-6">

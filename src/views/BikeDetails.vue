@@ -4,7 +4,7 @@
       <!-- Back Button -->
       <router-link
         to="/inventory"
-        class="inline-flex items-center space-x-2 text-gray-400 hover:text-jl-green transition-colors mb-8 group"
+        class="inline-flex items-center space-x-2 text-gray-400 hover:text-ktm-orange transition-colors mb-8 group"
       >
         <ArrowLeft class="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
         <span>Back to Inventory</span>
@@ -17,7 +17,7 @@
           <!-- Main Image -->
           <div
             ref="mainImageRef"
-            class="relative h-96 rounded-xl overflow-hidden bg-jl-gray border border-gray-800"
+            class="relative h-96 rounded-xl overflow-hidden bg-ktm-gray border border-gray-800"
           >
             <img
               :src="bike.images[currentImageIndex]"
@@ -27,7 +27,8 @@
 
             <!-- Brand Badge -->
             <div
-              class="absolute top-4 left-4 px-4 py-2 rounded-full text-sm font-semibold bg-black/50 backdrop-blur-sm border border-jl-green text-jl-green"
+              class="absolute top-4 left-4 px-4 py-2 rounded-full text-sm font-semibold bg-black/50 backdrop-blur-sm border"
+              :class="`border-${bike.brandColor} text-${bike.brandColor}`"
             >
               {{ bike.brand }}
             </div>
@@ -35,13 +36,13 @@
             <!-- Navigation Arrows -->
             <button
               @click="prevImage"
-              class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-jl-green transition-colors"
+              class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-ktm-orange transition-colors"
             >
               <ChevronLeft class="w-6 h-6 text-white" />
             </button>
             <button
               @click="nextImage"
-              class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-jl-green transition-colors"
+              class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-ktm-orange transition-colors"
             >
               <ChevronRight class="w-6 h-6 text-white" />
             </button>
@@ -56,7 +57,7 @@
               class="relative h-24 rounded-lg overflow-hidden border-2 transition-all"
               :class="
                 currentImageIndex === idx
-                  ? 'border-jl-green scale-105'
+                  ? 'border-ktm-orange scale-105'
                   : 'border-gray-800 hover:border-gray-600'
               "
             >
@@ -73,7 +74,7 @@
         <div ref="infoRef" class="space-y-6">
           <!-- Title -->
           <div>
-            <div class="flex items-center space-x-2 text-jl-green mb-2">
+            <div class="flex items-center space-x-2 text-ktm-orange mb-2">
               <span class="text-sm font-semibold tracking-wider uppercase">{{ bike.year }}</span>
             </div>
             <h1 class="heading-2 text-white mb-2">{{ bike.name }}</h1>
@@ -87,18 +88,18 @@
 
           <!-- Key Stats -->
           <div class="grid grid-cols-3 gap-4">
-            <div class="bg-jl-gray rounded-lg p-4 border border-gray-800">
-              <Gauge class="w-8 h-8 text-jl-green mb-2" />
+            <div class="bg-ktm-gray rounded-lg p-4 border border-gray-800">
+              <Gauge class="w-8 h-8 text-ktm-orange mb-2" />
               <div class="text-2xl font-bold text-white">{{ bike.specs.power.split(' ')[0] }}</div>
               <div class="text-xs text-gray-400">Horsepower</div>
             </div>
-            <div class="bg-jl-gray rounded-lg p-4 border border-gray-800">
-              <Zap class="w-8 h-8 text-jl-green mb-2" />
+            <div class="bg-ktm-gray rounded-lg p-4 border border-gray-800">
+              <Zap class="w-8 h-8 text-ktm-orange mb-2" />
               <div class="text-2xl font-bold text-white">{{ bike.specs.torque.split(' ')[0] }}</div>
               <div class="text-xs text-gray-400">Torque (Nm)</div>
             </div>
-            <div class="bg-jl-gray rounded-lg p-4 border border-gray-800">
-              <Gauge class="w-8 h-8 text-jl-green mb-2" />
+            <div class="bg-ktm-gray rounded-lg p-4 border border-gray-800">
+              <Gauge class="w-8 h-8 text-ktm-orange mb-2" />
               <div class="text-2xl font-bold text-white">{{ bike.specs.topSpeed }}</div>
               <div class="text-xs text-gray-400">Top Speed</div>
             </div>
@@ -129,7 +130,7 @@
       <!-- Technical Specifications -->
       <div ref="specsRef" class="mb-16">
         <div class="flex items-center space-x-3 mb-8">
-          <Settings class="w-8 h-8 text-jl-green" />
+          <Settings class="w-8 h-8 text-ktm-orange" />
           <h2 class="heading-3 text-white">Technical Specifications</h2>
         </div>
 
@@ -137,7 +138,7 @@
           <div
             v-for="(value, key) in bike.specs"
             :key="key"
-            class="spec-card bg-jl-gray rounded-lg p-4 border border-gray-800 hover:border-jl-green transition-all duration-300"
+            class="spec-card bg-ktm-gray rounded-lg p-4 border border-gray-800 hover:border-ktm-orange transition-all duration-300"
           >
             <div class="flex items-center justify-between">
               <span class="text-gray-400 capitalize text-sm">{{ formatSpecKey(key) }}</span>
@@ -153,7 +154,7 @@
         <!-- Features -->
         <div ref="featuresRef">
           <div class="flex items-center space-x-3 mb-6">
-            <CheckCircle class="w-8 h-8 text-jl-green" />
+            <CheckCircle class="w-8 h-8 text-ktm-orange" />
             <h2 class="heading-3 text-white">Features</h2>
           </div>
 
@@ -161,9 +162,9 @@
             <div
               v-for="(feature, idx) in bike.features"
               :key="idx"
-              class="feature-card flex items-center space-x-3 bg-jl-gray rounded-lg p-4 border border-gray-800 hover:border-jl-green transition-all duration-300"
+              class="feature-card flex items-center space-x-3 bg-ktm-gray rounded-lg p-4 border border-gray-800 hover:border-ktm-orange transition-all duration-300"
             >
-              <div class="w-2 h-2 bg-jl-green rounded-full"></div>
+              <div class="w-2 h-2 bg-ktm-orange rounded-full"></div>
               <span class="text-gray-300">{{ feature }}</span>
             </div>
           </div>
@@ -172,7 +173,7 @@
         <!-- Highlights -->
         <div ref="highlightsRef">
           <div class="flex items-center space-x-3 mb-6">
-            <Star class="w-8 h-8 text-jl-green" />
+            <Star class="w-8 h-8 text-ktm-orange" />
             <h2 class="heading-3 text-white">Highlights</h2>
           </div>
 
@@ -180,12 +181,12 @@
             <div
               v-for="(highlight, idx) in bike.highlights"
               :key="idx"
-              class="highlight-card flex items-start space-x-3 bg-jl-gray rounded-lg p-4 border border-gray-800"
+              class="highlight-card flex items-start space-x-3 bg-ktm-gray rounded-lg p-4 border border-gray-800"
             >
               <div
-                class="w-6 h-6 bg-jl-green/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                class="w-6 h-6 bg-ktm-orange/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
               >
-                <span class="text-jl-green text-sm font-bold">{{ idx + 1 }}</span>
+                <span class="text-ktm-orange text-sm font-bold">{{ idx + 1 }}</span>
               </div>
               <p class="text-gray-300 leading-relaxed">{{ highlight }}</p>
             </div>
@@ -196,7 +197,7 @@
       <!-- Related Bikes -->
       <div ref="relatedRef">
         <div class="flex items-center space-x-3 mb-8">
-          <Bike class="w-8 h-8 text-jl-green" />
+          <Bike class="w-8 h-8 text-ktm-orange" />
           <h2 class="heading-3 text-white">You Might Also Like</h2>
         </div>
 
@@ -205,7 +206,7 @@
             v-for="relatedBike in relatedBikes"
             :key="relatedBike.id"
             :to="`/bike/${relatedBike.id}`"
-            class="related-card group bg-jl-gray rounded-xl p-4 border border-gray-800 hover:border-jl-green transition-all duration-300"
+            class="related-card group bg-ktm-gray rounded-xl p-4 border border-gray-800 hover:border-ktm-orange transition-all duration-300"
           >
             <div class="relative h-48 rounded-lg overflow-hidden mb-4">
               <img
@@ -215,7 +216,7 @@
               />
             </div>
             <h3
-              class="text-lg font-semibold text-white group-hover:text-jl-green transition-colors"
+              class="text-lg font-semibold text-white group-hover:text-ktm-orange transition-colors"
             >
               {{ relatedBike.name }}
             </h3>
@@ -228,7 +229,7 @@
     <!-- Loading State -->
     <div v-else class="section-container py-20 text-center">
       <div
-        class="inline-block w-16 h-16 border-4 border-jl-green border-t-transparent rounded-full animate-spin"
+        class="inline-block w-16 h-16 border-4 border-ktm-orange border-t-transparent rounded-full animate-spin"
       ></div>
       <p class="text-gray-400 mt-4">Loading bike details...</p>
     </div>

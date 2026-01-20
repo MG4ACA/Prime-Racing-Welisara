@@ -6,7 +6,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-jl-dark">
+    <section id="about" class="py-20 bg-ktm-dark">
       <AboutSection />
     </section>
 
@@ -16,7 +16,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-jl-dark">
+    <section id="services" class="py-20 bg-ktm-dark">
       <ServicesSection />
     </section>
 
