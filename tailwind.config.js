@@ -5,9 +5,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        'ktm-orange': '#FF6600',
-        'ktm-dark': '#1a1a1a',
-        'ktm-gray': '#2d2d2d',
+        'jl-green': '#00BC00',
+        'jl-dark': '#1a1a1a',
+        'jl-gray': '#2d2d2d',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

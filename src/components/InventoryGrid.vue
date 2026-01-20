@@ -2,7 +2,7 @@
   <div class="section-container">
     <!-- Section Header -->
     <div class="text-center mb-16">
-      <div class="flex items-center justify-center space-x-2 text-ktm-orange mb-4">
+      <div class="flex items-center justify-center space-x-2 text-jl-green mb-4">
         <Bike class="w-6 h-6" />
         <span class="text-sm font-semibold tracking-wider uppercase">Our Inventory</span>
       </div>

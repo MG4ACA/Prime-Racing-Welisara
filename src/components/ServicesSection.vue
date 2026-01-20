@@ -2,7 +2,7 @@
   <div class="section-container">
     <!-- Section Header -->
     <div class="text-center mb-16">
-      <div class="flex items-center justify-center space-x-2 text-ktm-orange mb-4">
+      <div class="flex items-center justify-center space-x-2 text-jl-green mb-4">
         <Wrench class="w-6 h-6" />
         <span class="text-sm font-semibold tracking-wider uppercase">Our Services</span>
       </div>
@@ -22,13 +22,13 @@
         v-for="(service, index) in services"
         :key="index"
         ref="serviceRefs"
-        class="card group hover:border-ktm-orange/50 transition-all duration-300"
+        class="card group hover:border-jl-green/50 transition-all duration-300"
       >
         <!-- Icon -->
         <div
-          class="w-14 h-14 bg-ktm-orange/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-ktm-orange/20 transition-colors"
+          class="w-14 h-14 bg-jl-green/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-jl-green/20 transition-colors"
         >
-          <component :is="service.icon" class="w-8 h-8 text-ktm-orange" />
+          <component :is="service.icon" class="w-8 h-8 text-jl-green" />
         </div>
 
         <!-- Content -->
@@ -38,7 +38,7 @@
         <!-- Features -->
         <ul class="space-y-2">
           <li v-for="feature in service.features" :key="feature" class="flex items-start space-x-2">
-            <Check class="w-4 h-4 text-ktm-orange flex-shrink-0 mt-0.5" />
+            <Check class="w-4 h-4 text-jl-green flex-shrink-0 mt-0.5" />
             <span class="text-sm text-gray-300">{{ feature }}</span>
           </li>
         </ul>
