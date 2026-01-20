@@ -187,7 +187,7 @@
             <div
               class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4"
             >
-              <CheckCircle class="w-10 h-10 text-green-500" />
+              <CheckCircle class="w-10 h-10 text-ktm-orange" />
             </div>
             <h3 class="text-2xl font-bold text-white mb-2">Booking Confirmed!</h3>
             <p class="text-gray-400 mb-6">
