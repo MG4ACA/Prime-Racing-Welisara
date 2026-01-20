@@ -6,27 +6,27 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-jl-dark">
+    <section id="about" class="py-20 bg-white">
       <AboutSection />
     </section>
 
     <!-- Inventory Section -->
-    <section id="inventory" class="py-20">
+    <section id="inventory" class="py-20 bg-gray-50/50">
       <InventoryGrid />
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-jl-dark">
+    <section id="services" class="py-20 bg-white">
       <ServicesSection />
     </section>
 
     <!-- Test Ride Form -->
-    <section id="test-ride" class="py-20">
+    <section id="test-ride" class="py-20 bg-gray-50/50">
       <TestRideForm />
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20">
+    <section id="contact" class="py-20 bg-white">
       <ContactSection />
     </section>
   </div>

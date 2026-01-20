@@ -1,163 +1,175 @@
 <template>
-  <div class="section-container">
+  <div class="section-container bg-white px-4 md:px-0">
     <!-- Section Header -->
     <div class="text-center mb-16">
-      <div class="flex items-center justify-center space-x-2 text-jl-green mb-4">
+      <div class="flex items-center justify-center space-x-2 text-honda-red mb-4">
         <MapPin class="w-6 h-6" />
-        <span class="text-sm font-semibold tracking-wider uppercase">Get in Touch</span>
+        <span class="text-sm font-bold tracking-wider uppercase">Contact Center</span>
       </div>
-      <h2 class="heading-2 text-white mb-4">
-        Visit Our
-        <span class="gradient-text">Showroom</span>
+      <h2 class="heading-2 text-gray-900 mb-4">
+        Visit Honda
+        <span class="text-honda-red">Hub SL</span>
       </h2>
-      <p class="text-gray-400 max-w-2xl mx-auto">
-        Come experience our motorcycles in person. Our expert team is ready to assist you.
+      <p class="text-gray-600 max-w-2xl mx-auto font-medium">
+        Experience the finest Japanese engineering in person. Our Malabe showroom is open and our
+        team is ready to help you find your perfect ride.
       </p>
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-12">
+    <div class="grid lg:grid-cols-2 gap-12 mb-12">
       <!-- Contact Info -->
-      <div class="space-y-8">
+      <div class="space-y-6">
         <!-- Location -->
-        <div class="card group cursor-pointer">
-          <div class="flex items-start space-x-4">
+        <div
+          class="p-8 bg-gray-50 rounded-3xl border border-gray-100 group transition-all duration-300"
+        >
+          <div class="flex items-start space-x-6">
             <div
-              class="w-12 h-12 bg-jl-green/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-jl-green/20 transition-colors duration-300"
+              class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center flex-shrink-0 group-hover:bg-honda-red transition-all duration-500"
             >
-              <MapPin class="w-6 h-6 text-jl-green" />
+              <MapPin class="w-7 h-7 text-honda-red group-hover:text-white" />
             </div>
             <div>
-              <h3 class="text-lg font-semibold text-white mb-2">Address</h3>
-              <p class="text-gray-400">
-                No. 154, Puttalam Road
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Our Showroom</h3>
+              <p class="text-gray-600 font-medium leading-relaxed">
+                283/8, 5th Lane, Bakmeegaha Road
                 <br />
-                Kurunegala, Sri Lanka
+                Kahanthota Rd, Malabe
               </p>
             </div>
           </div>
         </div>
 
         <!-- Phone -->
-        <div class="card group cursor-pointer">
-          <div class="flex items-start space-x-4">
+        <div
+          class="p-8 bg-gray-50 rounded-3xl border border-gray-100 group transition-all duration-300"
+        >
+          <div class="flex items-start space-x-6">
             <div
-              class="w-12 h-12 bg-jl-green/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-jl-green/20 transition-colors duration-300"
+              class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center flex-shrink-0 group-hover:bg-honda-red transition-all duration-500"
             >
-              <Phone class="w-6 h-6 text-jl-green" />
+              <Phone class="w-7 h-7 text-honda-red group-hover:text-white" />
             </div>
             <div>
-              <h3 class="text-lg font-semibold text-white mb-2">Phone</h3>
-              <a
-                href="tel:+94372228220"
-                class="text-gray-400 hover:text-jl-green transition-colors"
-              >
-                0372 228 220
-              </a>
-              <br />
-              <a
-                href="tel:+94717910091"
-                class="text-gray-400 hover:text-jl-green transition-colors"
-              >
-                071 791 0091 (WhatsApp)
-              </a>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Connect With Us</h3>
+              <div class="space-y-1">
+                <a
+                  href="tel:+94779202056"
+                  class="block text-lg font-bold text-gray-900 hover:text-honda-red transition-colors"
+                >
+                  077 920 2056
+                </a>
+                <a
+                  href="https://wa.me/94779202056"
+                  target="_blank"
+                  class="flex items-center space-x-2 text-gray-600 font-bold hover:text-green-600 transition-colors"
+                >
+                  <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                  <span>WhatsApp Inquiry</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Email -->
-        <div class="card group cursor-pointer">
-          <div class="flex items-start space-x-4">
+        <div
+          class="p-8 bg-gray-50 rounded-3xl border border-gray-100 group transition-all duration-300"
+        >
+          <div class="flex items-start space-x-6">
             <div
-              class="w-12 h-12 bg-jl-green/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-jl-green/20 transition-colors duration-300"
+              class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center flex-shrink-0 group-hover:bg-honda-red transition-all duration-500"
             >
-              <Mail class="w-6 h-6 text-jl-green" />
+              <Mail class="w-7 h-7 text-honda-red group-hover:text-white" />
             </div>
             <div>
-              <h3 class="text-lg font-semibold text-white mb-2">Email</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Email Support</h3>
               <a
-                href="mailto:jlracing16@gmail.com"
-                class="text-gray-400 hover:text-jl-green transition-colors"
+                href="mailto:dalulana@gmail.com"
+                class="text-gray-600 font-medium hover:text-honda-red transition-colors"
               >
-                jlracing16@gmail.com
-              </a>
-              <br />
-              <a
-                href="mailto:info@jlracing.lk"
-                class="text-gray-400 hover:text-jl-green transition-colors"
-              >
-                info@jlracing.lk
+                dalulana@gmail.com
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Business Hours & Social -->
-      <div class="space-y-8">
-        <!-- Business Hours -->
-        <div class="card">
-          <div class="flex items-center space-x-3 mb-6">
-            <div class="w-12 h-12 bg-jl-green/10 rounded-lg flex items-center justify-center">
-              <Clock class="w-6 h-6 text-jl-green" />
-            </div>
-            <h3 class="text-xl font-semibold text-white">Business Hours</h3>
+      <!-- Business Hours -->
+      <div class="bg-gray-900 rounded-3xl p-10 text-white shadow-2xl shadow-gray-200">
+        <div class="flex items-center space-x-4 mb-8">
+          <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center">
+            <Clock class="w-7 h-7 text-honda-red" />
           </div>
+          <h3 class="text-2xl font-bold uppercase tracking-tight">Business Hours</h3>
+        </div>
 
-          <div class="space-y-3">
-            <div
-              v-for="(hours, day) in businessHours"
-              :key="day"
-              class="flex items-center justify-between py-2 border-b border-gray-800 last:border-0"
+        <div class="space-y-4">
+          <div
+            v-for="(hours, day) in businessHours"
+            :key="day"
+            class="flex items-center justify-between py-3 border-b border-white/10 last:border-0"
+          >
+            <span class="text-gray-400 font-bold uppercase text-xs tracking-widest">{{ day }}</span>
+            <span
+              class="font-mono text-sm tracking-tighter"
+              :class="hours === 'Closed' ? 'text-honda-red' : 'text-white'"
             >
-              <span class="text-gray-400">{{ day }}</span>
-              <span
-                class="font-semibold"
-                :class="hours === 'Closed' ? 'text-jl-green' : 'text-white'"
-              >
-                {{ hours }}
-              </span>
-            </div>
+              {{ hours }}
+            </span>
           </div>
+        </div>
+
+        <!-- Tagline -->
+        <div class="mt-12 p-6 bg-honda-red rounded-2xl text-center">
+          <p class="font-bold text-white uppercase tracking-widest text-xs mb-1">
+            Authentic Japanese
+          </p>
+          <p class="text-2xl font-black italic">HONDA HUB SL</p>
         </div>
       </div>
     </div>
 
-    <div class="flex gap-6 mt-4">
+    <div class="flex flex-col md:flex-row gap-6">
       <!-- Social Media -->
-      <div class="card flex-3">
+      <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100 flex-1">
         <div class="flex items-center space-x-3 mb-6">
-          <div class="w-12 h-12 bg-jl-green/10 rounded-lg flex items-center justify-center">
-            <Share2 class="w-6 h-6 text-jl-green" />
+          <div class="w-12 h-12 bg-honda-red/10 rounded-xl flex items-center justify-center">
+            <Share2 class="w-6 h-6 text-honda-red" />
           </div>
-          <h3 class="text-xl font-semibold text-white">Follow Us</h3>
+          <h3 class="text-xl font-bold text-gray-900">Follow Our Updates</h3>
         </div>
 
-        <div class="grid gap-3">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-3">
           <a
             v-for="social in socialLinks"
             :key="social.name"
             :href="social.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center space-x-3 p-3 bg-jl-dark rounded-lg border border-gray-800 hover:border-jl-green hover:bg-jl-green/5 transition-all duration-300 group"
+            class="flex items-center justify-center space-x-3 p-4 bg-white rounded-2xl border border-gray-100 hover:border-honda-red/30 hover:bg-white hover:shadow-lg transition-all duration-300 group"
           >
             <component
               :is="social.icon"
-              class="w-5 h-5 text-gray-400 group-hover:text-jl-green transition-colors"
+              class="w-5 h-5 text-gray-400 group-hover:text-honda-red transition-colors"
             />
-            <span class="text-gray-400 group-hover:text-white transition-colors">
+            <span
+              class="text-gray-600 font-bold group-hover:text-gray-900 transition-colors uppercase text-xs tracking-widest"
+            >
               {{ social.name }}
             </span>
           </a>
         </div>
       </div>
 
-      <!-- Map Placeholder -->
-      <div class="card p-0 overflow-hidden group cursor-pointer flex-1">
-        <div class="relative h-96 bg-jl-dark">
+      <!-- Map Block -->
+      <div
+        class="bg-gray-50 rounded-3xl p-4 overflow-hidden border border-gray-100 group cursor-pointer flex-[2]"
+      >
+        <div class="relative h-64 md:h-full min-h-[300px] bg-gray-200 rounded-2xl overflow-hidden">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.4267!2d79.9!3d7.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDAnMDAuMCJOIDc5wrA1NCcwMC4wIkU!5e0!3m2!1sen!2slk!4v1234567890"
-            class="w-full h-full border-0 group-hover:scale-105 transition-transform duration-500"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.916892!2d79.95!3d6.9!"
+            class="w-full h-full border-0 group-hover:scale-105 transition-transform duration-700 opacity-90"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -195,22 +207,22 @@ const socialLinks = [
   {
     name: 'Facebook',
     icon: Facebook,
-    url: 'https://facebook.com/jlracingkurunegala',
+    url: '#',
   },
   {
     name: 'Instagram',
     icon: Instagram,
-    url: 'https://instagram.com/jlracingkurunegala',
+    url: '#',
   },
   {
     name: 'Twitter',
     icon: Twitter,
-    url: 'https://twitter.com/jlracing_kng',
+    url: '#',
   },
   {
     name: 'YouTube',
     icon: Youtube,
-    url: 'https://youtube.com/@jlracingkurunegala',
+    url: '#',
   },
 ];
 </script>

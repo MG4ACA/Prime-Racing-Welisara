@@ -1,18 +1,18 @@
 <template>
-  <div class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <div class="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
     <!-- Background Pattern -->
-    <div class="absolute inset-0 bg-gradient-to-br from-black via-jl-dark to-black"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-gray-100"></div>
     <div class="absolute inset-0 opacity-20">
       <div
         class="absolute inset-0"
         style="
-          background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300BC00' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);
+          background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23CC0000' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);
         "
       ></div>
     </div>
 
     <!-- Parallax Image Carousel Container -->
-    <div ref="parallaxContainer" class="absolute inset-0 opacity-30" @mousemove="handleMouseMove">
+    <div ref="parallaxContainer" class="absolute inset-0 opacity-10" @mousemove="handleMouseMove">
       <div
         ref="parallaxImage"
         class="w-full h-full bg-cover bg-center transition-all duration-1000 ease-out"
@@ -33,7 +33,7 @@
         @click="currentImageIndex = index"
         :class="[
           'w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all duration-300',
-          currentImageIndex === index ? 'bg-jl-green sm:w-8 w-6' : 'bg-gray-400 hover:bg-gray-300',
+          currentImageIndex === index ? 'bg-honda-red sm:w-8 w-6' : 'bg-gray-300 hover:bg-gray-400',
         ]"
       ></button>
     </div>
@@ -41,30 +41,19 @@
     <!-- Content -->
     <div class="relative z-10 section-container text-center">
       <div class="space-y-8">
-        <!-- Subtitle -->
-        <!-- <div class="flex items-center justify-center space-x-1 sm:space-x-2 text-jl-green">
-          <div class="hidden sm:block w-12 h-0.5 bg-jl-green"></div>
-          <Zap class="w-4 sm:w-5 h-4 sm:h-5" :stroke-width="2" />
-          <span class="text-xs sm:text-sm font-semibold tracking-wider uppercase">
-            Premium Motorcycles
-          </span>
-          <Zap class="w-4 sm:w-5 h-4 sm:h-5" :stroke-width="2" />
-          <div class="hidden sm:block w-12 h-0.5 bg-jl-green"></div>
-        </div> -->
-
         <!-- Main Heading with GSAP Letter Animation -->
-        <h1 class="heading-1 text-white">
+        <h1 class="heading-1 text-gray-900">
           <span ref="headingRef" class="block"></span>
         </h1>
 
         <!-- Description -->
         <p
-          class="text-sm sm:text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4"
+          class="text-sm sm:text-lg md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4"
         >
-          <span class="text-jl-green font-bold">Louder. Faster. Meaner.</span>
+          <span class="text-honda-red font-bold">Experience Luxury. Experience Performance.</span>
           <br />
-          Imported Brand New Bikes with a
-          <span class="text-jl-green font-semibold">2-Year Warranty</span>
+          The Home of Genuine Japanese
+          <span class="text-honda-red font-semibold">Honda Scooters in Malabe</span>
         </p>
 
         <!-- CTA Buttons -->
@@ -73,16 +62,16 @@
         >
           <router-link to="/inventory" class="btn-primary w-full sm:w-auto text-sm sm:text-base">
             <span class="flex items-center justify-center gap-1 sm:gap-2">
-              <span class="hidden sm:inline">Explore Bikes</span>
-              <span class="sm:hidden">Explore</span>
+              <span class="hidden sm:inline">View Collection</span>
+              <span class="sm:hidden">Collection</span>
               <ArrowRight class="w-4 sm:w-5 h-4 sm:h-5" />
             </span>
           </router-link>
           <router-link to="/test-ride" class="btn-secondary w-full sm:w-auto text-sm sm:text-base">
             <span class="flex items-center justify-center gap-1 sm:gap-2">
-              <span class="hidden sm:inline">Book Test Ride</span>
-              <span class="sm:hidden">Book Ride</span>
-              <Calendar class="w-4 sm:w-5 h-4 sm:h-5" />
+              <span class="hidden sm:inline">Inquire on WhatsApp</span>
+              <span class="sm:hidden">WhatsApp</span>
+              <Phone class="w-4 sm:w-5 h-4 sm:h-5" />
             </span>
           </router-link>
         </div>
@@ -90,23 +79,23 @@
         <!-- Stats -->
         <div class="grid grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto pt-6 sm:pt-12 px-4">
           <div class="text-center">
-            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-jl-green">10+</div>
-            <div class="text-xs sm:text-sm text-gray-400 mt-1 sm:mt-2">Years Exp</div>
+            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-honda-red">Brand New</div>
+            <div class="text-xs sm:text-sm text-gray-500 mt-1 sm:mt-2">0-Mileage</div>
           </div>
-          <div class="text-center border-x border-gray-800">
-            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-jl-green">500+</div>
-            <div class="text-xs sm:text-sm text-gray-400 mt-1 sm:mt-2">Bikes Sold</div>
+          <div class="text-center border-x border-gray-200">
+            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-honda-red">Genuine</div>
+            <div class="text-xs sm:text-sm text-gray-500 mt-1 sm:mt-2">Japanese CR</div>
           </div>
           <div class="text-center">
-            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-jl-green">5</div>
-            <div class="text-xs sm:text-sm text-gray-400 mt-1 sm:mt-2">Brands</div>
+            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-honda-red">Fast</div>
+            <div class="text-xs sm:text-sm text-gray-500 mt-1 sm:mt-2">One-Day Reg</div>
           </div>
         </div>
       </div>
 
       <!-- Scroll Indicator -->
       <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-        <ChevronDown class="w-8 h-8 text-jl-green" />
+        <ChevronDown class="w-8 h-8 text-honda-red" />
       </div>
     </div>
   </div>
@@ -114,7 +103,7 @@
 
 <script setup>
 import { gsap } from 'gsap';
-import { ArrowRight, Calendar, ChevronDown } from 'lucide-vue-next';
+import { ArrowRight, ChevronDown } from 'lucide-vue-next';
 import { onMounted, onUnmounted, ref } from 'vue';
 
 const headingRef = ref(null);
@@ -164,8 +153,8 @@ onMounted(() => {
   // Start carousel
   startCarousel();
 
-  // Letter-by-letter animation for "The Beast Returns"
-  const text = 'The Beast Returns';
+  // Letter-by-letter animation for "Honda Hub SL"
+  const text = 'Honda Hub SL';
   const headingElement = headingRef.value;
 
   if (headingElement) {

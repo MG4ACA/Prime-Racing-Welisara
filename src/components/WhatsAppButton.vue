@@ -38,8 +38,10 @@ import { onMounted, ref } from 'vue';
 const whatsappBtn = ref(null);
 
 // WhatsApp number (format: country code + number without + or spaces)
-const whatsappNumber = '94717910091';
-const message = encodeURIComponent("Hi! I'm interested in learning more about your motorcycles.");
+const whatsappNumber = '94779202056';
+const message = encodeURIComponent(
+  "Hi Honda Hub SL! I'm interested in learning more about your Honda scooters.",
+);
 
 const handleClick = () => {
   // GSAP pop animation

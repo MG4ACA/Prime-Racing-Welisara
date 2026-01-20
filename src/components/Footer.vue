@@ -1,30 +1,30 @@
 <template>
-  <footer class="bg-jl-dark border-t border-gray-800">
+  <footer class="bg-gray-50 border-t border-gray-200">
     <div class="section-container py-12">
       <div class="grid md:grid-cols-4 gap-8">
         <!-- Brand -->
         <div class="space-y-4">
           <div class="flex items-center space-x-3">
-            <img src="/logo.png" alt="JL Racing Logo" class="h-10 w-auto rounded-lg" />
+            <img src="/logo.png" alt="Honda Hub SL Logo" class="h-10 w-auto rounded-lg" />
             <div>
-              <h3 class="text-lg font-display font-bold text-white">JL Racing</h3>
-              <p class="text-xs text-jl-green">Kurunegala</p>
+              <h3 class="text-lg font-display font-bold text-gray-900">Honda Hub SL</h3>
+              <p class="text-xs text-honda-red">Malabe</p>
             </div>
           </div>
-          <p class="text-sm text-gray-400">
-            Your trusted partner for brand new imported motorcycles in Sri Lanka. The Beast Returns
-            - Louder, Faster, Meaner.
+          <p class="text-sm text-gray-600">
+            Experience Luxury. Experience Performance. The Home of Genuine Japanese Honda Scooters
+            in Malabe.
           </p>
         </div>
 
         <!-- Quick Links -->
         <div>
-          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <h4 class="text-gray-900 font-semibold mb-4">Quick Links</h4>
           <ul class="space-y-2">
             <li>
               <router-link
                 to="/"
-                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
+                class="text-gray-600 hover:text-honda-red transition-colors text-sm"
               >
                 Home
               </router-link>
@@ -32,7 +32,7 @@
             <li>
               <router-link
                 to="/about"
-                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
+                class="text-gray-600 hover:text-honda-red transition-colors text-sm"
               >
                 About Us
               </router-link>
@@ -40,7 +40,7 @@
             <li>
               <router-link
                 to="/inventory"
-                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
+                class="text-gray-600 hover:text-honda-red transition-colors text-sm"
               >
                 Inventory
               </router-link>
@@ -48,7 +48,7 @@
             <li>
               <router-link
                 to="/services"
-                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
+                class="text-gray-600 hover:text-honda-red transition-colors text-sm"
               >
                 Services
               </router-link>
@@ -56,7 +56,7 @@
             <li>
               <router-link
                 to="/test-ride"
-                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
+                class="text-gray-600 hover:text-honda-red transition-colors text-sm"
               >
                 Book Test Ride
               </router-link>
@@ -64,7 +64,7 @@
             <li>
               <router-link
                 to="/contact"
-                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
+                class="text-gray-600 hover:text-honda-red transition-colors text-sm"
               >
                 Contact
               </router-link>
@@ -74,40 +74,42 @@
 
         <!-- Brands -->
         <div>
-          <h4 class="text-white font-semibold mb-4">Our Brands</h4>
-          <ul class="space-y-2">
-            <li class="text-jl-green text-sm">KTM</li>
-            <li class="text-jl-green text-sm">Kawasaki</li>
-            <li class="text-jl-green text-sm">Yamaha</li>
-            <li class="text-jl-green text-sm">Honda</li>
-            <li class="text-jl-green text-sm">Suzuki</li>
+          <h4 class="text-gray-900 font-semibold mb-4">Our Models</h4>
+          <ul class="space-y-1">
+            <li class="text-gray-600 text-sm">Honda ADV 160</li>
+            <li class="text-gray-600 text-sm">Honda PCX 160</li>
+            <li class="text-gray-600 text-sm">Honda ADV 350</li>
+            <li class="text-gray-600 text-sm">Genuine Japanese CR</li>
           </ul>
         </div>
 
         <!-- Contact Info -->
         <div>
-          <h4 class="text-white font-semibold mb-4">Contact Info</h4>
+          <h4 class="text-gray-900 font-semibold mb-4">Contact Info</h4>
           <ul class="space-y-3">
             <li class="flex items-start space-x-2">
-              <MapPin class="w-4 h-4 text-jl-green mt-0.5 flex-shrink-0" />
-              <span class="text-gray-400 text-sm">No. 154, Puttalam Road, Kurunegala</span>
+              <MapPin class="w-4 h-4 text-honda-red mt-0.5 flex-shrink-0" />
+              <span class="text-gray-600 text-sm">
+                283/8, 5th Lane, Bakmeegaha Road, Kahanthota Rd, Malabe, Sri Lanka
+              </span>
             </li>
             <li class="flex items-center space-x-2">
-              <Phone class="w-4 h-4 text-jl-green flex-shrink-0" />
+              <Phone class="w-4 h-4 text-honda-red flex-shrink-0" />
               <a
-                href="tel:+94372228220"
-                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
+                href="https://wa.me/94779202056"
+                target="_blank"
+                class="text-gray-600 hover:text-honda-red transition-colors text-sm"
               >
-                0372 228 220
+                +94 77 920 2056
               </a>
             </li>
             <li class="flex items-center space-x-2">
-              <Mail class="w-4 h-4 text-jl-green flex-shrink-0" />
+              <Mail class="w-4 h-4 text-honda-red flex-shrink-0" />
               <a
-                href="mailto:jlracing16@gmail.com"
-                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
+                href="mailto:dalulana@gmail.com"
+                class="text-gray-600 hover:text-honda-red transition-colors text-sm"
               >
-                jlracing16@gmail.com
+                dalulana@gmail.com
               </a>
             </li>
           </ul>
@@ -116,10 +118,10 @@
 
       <!-- Bottom Bar -->
       <div
-        class="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4"
+        class="mt-12 pt-8 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-4"
       >
         <p class="text-gray-500 text-sm text-center md:text-left">
-          © {{ currentYear }} JL Racing Kurunegala. All rights reserved.
+          © {{ currentYear }} Honda Hub SL. All rights reserved.
         </p>
 
         <!-- Social Links -->
@@ -130,12 +132,12 @@
             :href="social.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="w-10 h-10 bg-jl-gray rounded-lg flex items-center justify-center hover:bg-jl-green hover:scale-110 transition-all duration-300 group"
+            class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-honda-red hover:scale-110 transition-all duration-300 group"
             :aria-label="social.name"
           >
             <component
               :is="social.icon"
-              class="w-5 h-5 text-gray-400 group-hover:text-white transition-colors"
+              class="w-5 h-5 text-gray-600 group-hover:text-white transition-colors"
             />
           </a>
         </div>
@@ -154,22 +156,22 @@ const socialLinks = [
   {
     name: 'Facebook',
     icon: Facebook,
-    url: 'https://facebook.com/jlracingkurunegala',
+    url: '#',
   },
   {
     name: 'Instagram',
     icon: Instagram,
-    url: 'https://instagram.com/jlracingkurunegala',
+    url: '#',
   },
   {
     name: 'Twitter',
     icon: Twitter,
-    url: 'https://twitter.com/jlracing_kng',
+    url: '#',
   },
   {
     name: 'YouTube',
     icon: Youtube,
-    url: 'https://youtube.com/@jlracingkurunegala',
+    url: '#',
   },
 ];
 </script>

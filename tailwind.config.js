@@ -5,9 +5,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        'jl-green': '#00BC00',
-        'jl-dark': '#1a1a1a',
-        'jl-gray': '#2d2d2d',
+        'honda-red': '#CC0000',
+        'honda-dark': '#1a1a1a',
+        'honda-light': '#f4f4f4',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

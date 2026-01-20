@@ -1,45 +1,52 @@
 <template>
   <div class="section-container">
     <!-- Section Header -->
-    <div class="text-center mb-16">
-      <div class="flex items-center justify-center space-x-2 text-jl-green mb-4">
+    <div class="text-center mb-16 px-4">
+      <div class="flex items-center justify-center space-x-2 text-honda-red mb-4">
         <Wrench class="w-6 h-6" />
-        <span class="text-sm font-semibold tracking-wider uppercase">Our Services</span>
+        <span class="text-sm font-semibold tracking-wider uppercase">Our Premium Standards</span>
       </div>
-      <h2 class="heading-2 text-white mb-4">
-        Complete Motorcycle
-        <span class="gradient-text">Care Solutions</span>
+      <h2 class="heading-2 text-gray-900 mb-4">
+        Japanese Excellence in
+        <span class="text-honda-red">Every Mile</span>
       </h2>
-      <p class="text-gray-400 max-w-2xl mx-auto">
-        From maintenance to customization, we provide comprehensive services to keep your motorcycle
-        running at peak performance.
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        At Honda Hub SL, we bridge the gap between Japan and Malabe, ensuring that every motorcycle
+        we deliver meets the highest standards of Japanese engineering and authenticity.
       </p>
     </div>
 
     <!-- Services Grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
       <div
         v-for="(service, index) in services"
         :key="index"
         ref="serviceRefs"
-        class="card group hover:border-jl-green/50 transition-all duration-300"
+        class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-honda-red/30 transition-all duration-500 group"
       >
         <!-- Icon -->
         <div
-          class="w-14 h-14 bg-jl-green/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-jl-green/20 transition-colors"
+          class="w-16 h-16 bg-honda-red/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-honda-red group-hover:rotate-6 transition-all duration-500"
         >
-          <component :is="service.icon" class="w-8 h-8 text-jl-green" />
+          <component
+            :is="service.icon"
+            class="w-8 h-8 text-honda-red group-hover:text-white transition-colors"
+          />
         </div>
 
         <!-- Content -->
-        <h3 class="text-xl font-semibold text-white mb-2">{{ service.name }}</h3>
-        <p class="text-gray-400 text-sm mb-4">{{ service.description }}</p>
+        <h3
+          class="text-xl font-bold text-gray-900 mb-3 group-hover:text-honda-red transition-colors"
+        >
+          {{ service.name }}
+        </h3>
+        <p class="text-gray-500 text-sm mb-6 leading-relaxed">{{ service.description }}</p>
 
         <!-- Features -->
-        <ul class="space-y-2">
-          <li v-for="feature in service.features" :key="feature" class="flex items-start space-x-2">
-            <Check class="w-4 h-4 text-jl-green flex-shrink-0 mt-0.5" />
-            <span class="text-sm text-gray-300">{{ feature }}</span>
+        <ul class="space-y-3">
+          <li v-for="feature in service.features" :key="feature" class="flex items-start space-x-3">
+            <Check class="w-5 h-5 text-honda-red flex-shrink-0 mt-0.5" />
+            <span class="text-sm text-gray-700 font-medium">{{ feature }}</span>
           </li>
         </ul>
       </div>
@@ -50,7 +57,7 @@
 <script setup>
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Check, Palette, Shield, Wrench, Zap } from 'lucide-vue-next';
+import { Check, ClipboardCheck, ShieldCheck, Ship, Wrench } from 'lucide-vue-next';
 import { onMounted, ref } from 'vue';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -59,33 +66,33 @@ const serviceRefs = ref([]);
 
 const services = [
   {
-    name: 'Maintenance & Service',
-    description: 'Regular maintenance and servicing to keep your bike in top condition.',
-    icon: Wrench,
-    features: ['Oil and filter changes', 'Brake inspection', 'Chain maintenance', 'Tire rotation'],
+    name: 'Direct Japan Sourcing',
+    description: 'Every bike is hand-selected from premier Japanese export houses.',
+    icon: Ship,
+    features: ['Auction Grade 5/6', 'Export Certification', 'Direct Shipment', 'BDS/JU Sourced'],
   },
   {
-    name: 'Performance Upgrade',
-    description: 'Enhance your motorcycle performance with quality upgrades.',
-    icon: Zap,
-    features: ['ECU tuning', 'Exhaust systems', 'Air filters', 'Suspension upgrades'],
-  },
-  {
-    name: 'Warranty & Protection',
-    description: 'Comprehensive coverage for your investment.',
-    icon: Shield,
-    features: ['Extended warranty', 'Roadside assistance', 'Insurance support', 'Damage coverage'],
-  },
-  {
-    name: 'Custom Modifications',
-    description: 'Personalize your ride with custom modifications.',
-    icon: Palette,
+    name: '0-Mileage Guarantee',
+    description: 'We specialize in pristine, never-before-ridden motorcycles.',
+    icon: ClipboardCheck,
     features: [
-      'Custom paint jobs',
-      'Bodykit installation',
-      'Graphics design',
-      'Seat customization',
+      'Zero km Verification',
+      'Pristine Aesthetics',
+      'Factory Condition',
+      'Genuine Imports',
     ],
+  },
+  {
+    name: 'Authorized Papers',
+    description: 'Clean, transparent documentation for complete peace of mind.',
+    icon: ShieldCheck,
+    features: ['Genuine CR Issued', 'One-Day Registration', 'Duty Paid Docs', 'Clear Ownership'],
+  },
+  {
+    name: 'Elite Support',
+    description: 'Premium after-sales support for the life of your Honda.',
+    icon: Wrench,
+    features: ['Honda Diagnostics', 'Genuine Spares', 'Expert Technicians', 'Maintenance Plans'],
   },
 ];
 

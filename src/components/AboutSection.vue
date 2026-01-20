@@ -1,70 +1,66 @@
 <template>
-  <div class="section-container">
+  <div class="section-container bg-white">
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <!-- Text Content -->
       <div class="space-y-6">
-        <div class="flex items-center space-x-2 text-jl-green">
+        <div class="flex items-center space-x-2 text-honda-red">
           <Award class="w-6 h-6" />
-          <span class="text-sm font-semibold tracking-wider uppercase">About Us</span>
+          <span class="text-sm font-bold tracking-wider uppercase">Premium Standards</span>
         </div>
 
-        <h2 class="heading-2 text-white">
-          Your Trusted
-          <span class="gradient-text">Motorcycle Partner</span>
+        <h2 class="heading-2 text-gray-900">
+          The Honda Hub SL
+          <span class="text-honda-red">Difference</span>
         </h2>
 
-        <div class="space-y-4 text-gray-300 leading-relaxed">
+        <div class="space-y-4 text-gray-700 leading-relaxed">
           <p>
             At
-            <span class="text-white font-semibold">JL Racing Kurunegala</span>
-            , we're passionate about delivering the ultimate riding experience with brand new
-            imported motorcycles. Located at
-            <span class="text-jl-green">No. 154, Puttalam Road, Kurunegala</span>
-            , we specialize in premium motorcycles from the world's leading manufacturers, all
-            backed by a comprehensive 2-year warranty.
+            <span class="text-gray-900 font-bold underline decoration-honda-red decoration-2">
+              Honda Hub SL
+            </span>
+            , we specialize in bringing the highest quality Japanese engineering to the streets of
+            Sri Lanka. Located in the heart of
+            <span class="text-gray-900 font-semibold">Malabe (185/A, Kaduwela Road)</span>
+            , we are the premier destination for brand new, 0-mileage Honda scooters.
           </p>
 
           <p>
-            With over a decade of experience in the motorcycle industry, we've built a reputation
-            for excellence in sales, service, and customer satisfaction. Our expert team is
-            dedicated to helping you find the perfect ride that matches your style and needs. The
-            Beast Returns - Louder, Faster, Meaner.
+            Our commitment to authenticity means every motorcycle in our showroom is a
+            <span class="text-honda-red font-semibold italic">Genuine Japanese Import</span>
+            . From the agile ADV 160 to the luxurious PCX series, we ensure that every rider
+            receives specialized attention, comprehensive 2-year warranty support, and a seamless
+            registration process. Experience the pinnacle of performance and reliability.
           </p>
         </div>
 
-        <!-- Brands -->
+        <!-- Featured Qualities -->
         <div class="space-y-3">
-          <h3 class="text-lg font-semibold text-white">Featured Brands</h3>
+          <h3 class="text-lg font-bold text-gray-900">Why Choose Us?</h3>
           <div class="grid grid-cols-2 gap-3">
             <div
-              class="flex items-center space-x-2 bg-jl-gray p-3 rounded-lg border border-gray-800"
+              class="flex items-center space-x-2 bg-gray-50 p-3 rounded-lg border border-gray-100"
             >
-              <div class="w-2 h-2 bg-jl-green rounded-full"></div>
-              <span class="text-jl-green font-semibold">KTM</span>
+              <div class="w-2 h-2 bg-honda-red rounded-full"></div>
+              <span class="text-gray-900 font-semibold">0-Mileage Units</span>
             </div>
             <div
-              class="flex items-center space-x-2 bg-jl-gray p-3 rounded-lg border border-gray-800"
+              class="flex items-center space-x-2 bg-gray-50 p-3 rounded-lg border border-gray-100"
             >
-              <div class="w-2 h-2 bg-jl-green rounded-full"></div>
-              <span class="text-jl-green font-semibold">Kawasaki</span>
+              <div class="w-2 h-2 bg-honda-red rounded-full"></div>
+              <span class="text-gray-900 font-semibold">Genuine CR</span>
             </div>
             <div
-              class="flex items-center space-x-2 bg-jl-gray p-3 rounded-lg border border-gray-800"
+              class="flex items-center space-x-2 bg-gray-50 p-3 rounded-lg border border-gray-100"
             >
-              <div class="w-2 h-2 bg-jl-green rounded-full"></div>
-              <span class="text-jl-green font-semibold">Yamaha</span>
+              <div class="w-2 h-2 bg-honda-red rounded-full"></div>
+              <span class="text-gray-900 font-semibold">2-Year Warranty</span>
             </div>
             <div
-              class="flex items-center space-x-2 bg-jl-gray p-3 rounded-lg border border-gray-800"
+              class="flex items-center space-x-2 bg-gray-50 p-3 rounded-lg border border-gray-100"
             >
-              <div class="w-2 h-2 bg-jl-green rounded-full"></div>
-              <span class="text-jl-green font-semibold">Honda</span>
-            </div>
-            <div
-              class="flex items-center space-x-2 bg-jl-gray p-3 rounded-lg border border-gray-800"
-            >
-              <div class="w-2 h-2 bg-jl-green rounded-full"></div>
-              <span class="text-jl-green font-semibold">Suzuki</span>
+              <div class="w-2 h-2 bg-honda-red rounded-full"></div>
+              <span class="text-gray-900 font-semibold">One-Day Reg</span>
             </div>
           </div>
         </div>
@@ -72,14 +68,18 @@
 
       <!-- Features Grid -->
       <div class="grid grid-cols-2 gap-4">
-        <div v-for="(feature, index) in features" :key="index" class="card group cursor-pointer">
+        <div
+          v-for="(feature, index) in features"
+          :key="index"
+          class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 group cursor-default"
+        >
           <component
             :is="feature.icon"
-            class="w-10 h-10 text-jl-green mb-4 group-hover:scale-110 transition-transform duration-300"
+            class="w-10 h-10 text-honda-red mb-4 group-hover:scale-110 transition-transform duration-300"
             :stroke-width="1.5"
           />
-          <h3 class="text-lg font-semibold text-white mb-2">{{ feature.title }}</h3>
-          <p class="text-sm text-gray-400">{{ feature.description }}</p>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">{{ feature.title }}</h3>
+          <p class="text-sm text-gray-500">{{ feature.description }}</p>
         </div>
       </div>
     </div>
