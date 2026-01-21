@@ -189,3 +189,9 @@ onUnmounted(() => {
   stopCarousel();
 });
 </script>
+
+<style scoped>
+.opacity-10 {
+  opacity: 0.5 !important;
+}
+</style>
