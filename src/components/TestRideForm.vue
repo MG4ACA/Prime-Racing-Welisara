@@ -3,7 +3,7 @@
     <div class="max-w-3xl mx-auto">
       <!-- Section Header -->
       <div class="text-center mb-12">
-        <div class="flex items-center justify-center space-x-2 text-jl-green mb-4">
+        <div class="flex items-center justify-center space-x-2 text-ktm-orange mb-4">
           <Calendar class="w-6 h-6" />
           <span class="text-sm font-semibold tracking-wider uppercase">Book a Test Ride</span>
         </div>
@@ -32,7 +32,7 @@
               type="text"
               required
               placeholder="John Doe"
-              class="w-full pl-11 pr-4 py-3 bg-jl-dark border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:border-jl-green focus:outline-none focus:ring-2 focus:ring-jl-green/20 transition-all"
+              class="w-full pl-11 pr-4 py-3 bg-ktm-dark border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:border-ktm-orange focus:outline-none focus:ring-2 focus:ring-ktm-orange/20 transition-all"
             />
           </div>
         </div>
@@ -50,7 +50,7 @@
               type="tel"
               required
               placeholder="+94 77 123 4567"
-              class="w-full pl-11 pr-4 py-3 bg-jl-dark border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:border-jl-green focus:outline-none focus:ring-2 focus:ring-jl-green/20 transition-all"
+              class="w-full pl-11 pr-4 py-3 bg-ktm-dark border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:border-ktm-orange focus:outline-none focus:ring-2 focus:ring-ktm-orange/20 transition-all"
             />
           </div>
         </div>
@@ -68,7 +68,7 @@
               type="email"
               required
               placeholder="john@example.com"
-              class="w-full pl-11 pr-4 py-3 bg-jl-dark border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:border-jl-green focus:outline-none focus:ring-2 focus:ring-jl-green/20 transition-all"
+              class="w-full pl-11 pr-4 py-3 bg-ktm-dark border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:border-ktm-orange focus:outline-none focus:ring-2 focus:ring-ktm-orange/20 transition-all"
             />
           </div>
         </div>
@@ -84,7 +84,7 @@
               id="bike"
               v-model="formData.bike"
               required
-              class="w-full pl-11 pr-4 py-3 bg-jl-dark border border-gray-800 rounded-lg text-white focus:border-jl-green focus:outline-none focus:ring-2 focus:ring-jl-green/20 transition-all appearance-none cursor-pointer"
+              class="w-full pl-11 pr-4 py-3 bg-ktm-dark border border-gray-800 rounded-lg text-white focus:border-ktm-orange focus:outline-none focus:ring-2 focus:ring-ktm-orange/20 transition-all appearance-none cursor-pointer"
             >
               <option value="" disabled>Select a motorcycle</option>
               <option v-for="bike in bikes" :key="bike.id" :value="bike.name">
@@ -110,7 +110,7 @@
               type="date"
               required
               :min="minDate"
-              class="w-full pl-11 pr-4 py-3 bg-jl-dark border border-gray-800 rounded-lg text-white focus:border-jl-green focus:outline-none focus:ring-2 focus:ring-jl-green/20 transition-all"
+              class="w-full pl-11 pr-4 py-3 bg-ktm-dark border border-gray-800 rounded-lg text-white focus:border-ktm-orange focus:outline-none focus:ring-2 focus:ring-ktm-orange/20 transition-all"
             />
           </div>
         </div>
@@ -126,7 +126,7 @@
               id="time"
               v-model="formData.time"
               required
-              class="w-full pl-11 pr-4 py-3 bg-jl-dark border border-gray-800 rounded-lg text-white focus:border-jl-green focus:outline-none focus:ring-2 focus:ring-jl-green/20 transition-all appearance-none cursor-pointer"
+              class="w-full pl-11 pr-4 py-3 bg-ktm-dark border border-gray-800 rounded-lg text-white focus:border-ktm-orange focus:outline-none focus:ring-2 focus:ring-ktm-orange/20 transition-all appearance-none cursor-pointer"
             >
               <option value="" disabled>Select a time slot</option>
               <option value="09:00 AM">09:00 AM</option>
@@ -151,7 +151,7 @@
             v-model="formData.message"
             rows="4"
             placeholder="Any specific requirements or questions?"
-            class="w-full px-4 py-3 bg-jl-dark border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:border-jl-green focus:outline-none focus:ring-2 focus:ring-jl-green/20 transition-all resize-none"
+            class="w-full px-4 py-3 bg-ktm-dark border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:border-ktm-orange focus:outline-none focus:ring-2 focus:ring-ktm-orange/20 transition-all resize-none"
           ></textarea>
         </div>
 
@@ -187,7 +187,7 @@
             <div
               class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4"
             >
-              <CheckCircle class="w-10 h-10 text-ktm-orange" />
+              <CheckCircle class="w-10 h-10 text-green-500" />
             </div>
             <h3 class="text-2xl font-bold text-white mb-2">Booking Confirmed!</h3>
             <p class="text-gray-400 mb-6">

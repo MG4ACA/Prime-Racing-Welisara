@@ -18,11 +18,11 @@
   }
 
   .btn-primary {
-    @apply bg-ktm-orange hover:bg-orange-700 text-white font-semibold py-2 sm:py-3 px-4 sm:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-sm sm:text-base;
+    @apply bg-[#DB4437] hover:bg-red-700 text-white font-semibold py-2 sm:py-3 px-4 sm:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-sm sm:text-base;
   }
 
   .btn-secondary {
-    @apply border-2 border-ktm-orange text-ktm-orange hover:bg-ktm-orange hover:text-white font-semibold py-2 sm:py-3 px-4 sm:px-8 rounded-lg transition-all duration-300 text-sm sm:text-base;
+    @apply border-2 border-[#DB4437] text-[#DB4437] hover:bg-[#DB4437] hover:text-white font-semibold py-2 sm:py-3 px-4 sm:px-8 rounded-lg transition-all duration-300 text-sm sm:text-base;
   }
 
   .heading-1 {
@@ -38,15 +38,15 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-[#00BC00] to-green-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#DB4437] to-red-400 bg-clip-text text-transparent;
   }
 
   .card {
-    @apply bg-ktm-gray rounded-xl p-4 sm:p-6 border border-gray-800 transition-all duration-300;
+    @apply bg-[#1a1a1a] rounded-xl p-4 sm:p-6 border border-gray-800 transition-all duration-300;
   }
 
   .card:hover {
-    @apply border-[#00BC00] shadow-lg shadow-[#00BC00]/20;
+    @apply border-[#DB4437] shadow-lg shadow-[#DB4437]/20;
   }
 }
 
@@ -60,10 +60,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff6600;
+  background: #db4437;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00dd00;
+  background: #ef5350;
 }

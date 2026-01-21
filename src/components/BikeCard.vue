@@ -12,10 +12,21 @@
 
       <!-- Brand Badge -->
       <div
-        class="absolute top-4 left-4 z-20 px-3 py-1 rounded-full text-xs font-semibold bg-black/50 backdrop-blur-sm border"
-        :class="`border-${bike.brandColor} text-${bike.brandColor}`"
+        class="absolute top-4 left-4 z-20 px-3 py-1 rounded-full text-xs font-semibold bg-black/50 backdrop-blur-sm border border-jl-green text-jl-green"
       >
         {{ bike.brand }}
+      </div>
+
+      <!-- Condition Badge -->
+      <div
+        class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm"
+        :class="
+          bike.condition === 'Brand New'
+            ? 'bg-jl-green text-white border border-jl-green'
+            : 'bg-yellow-600 text-white border border-yellow-600'
+        "
+      >
+        {{ bike.condition }}
       </div>
 
       <!-- Image Navigation Dots -->
@@ -34,7 +45,7 @@
     <div class="space-y-3">
       <div>
         <h3
-          class="text-xl font-bold text-white group-hover:text-ktm-orange transition-colors duration-300"
+          class="text-xl font-bold text-white group-hover:text-jl-green transition-colors duration-300"
         >
           {{ bike.name }}
         </h3>
@@ -73,7 +84,7 @@
       <!-- View Details Button -->
       <router-link
         :to="`/bike/${bike.id}`"
-        class="w-full mt-4 py-2 bg-ktm-dark border border-gray-800 text-white rounded-lg hover:border-ktm-orange hover:text-ktm-orange transition-all duration-300 flex items-center justify-center space-x-2"
+        class="w-full mt-4 py-2 bg-jl-dark border border-gray-800 text-white rounded-lg hover:border-jl-green hover:text-jl-green transition-all duration-300 flex items-center justify-center space-x-2"
       >
         <Info class="w-4 h-4" />
         <span>View Full Specs</span>

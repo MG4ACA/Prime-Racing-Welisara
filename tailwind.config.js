@@ -5,9 +5,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        'jl-green': '#00BC00',
-        'jl-dark': '#1a1a1a',
-        'jl-gray': '#2d2d2d',
+        'jl-green': '#DB4437',
+        'motobike-red': '#DB4437',
+        'jl-dark': '#000000',
+        'jl-gray': '#1a1a1a',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

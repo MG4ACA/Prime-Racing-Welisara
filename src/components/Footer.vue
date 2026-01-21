@@ -5,15 +5,15 @@
         <!-- Brand -->
         <div class="space-y-4">
           <div class="flex items-center space-x-3">
-            <img src="/logo.png" alt="Prime Racing Logo" class="h-10 w-auto rounded-lg" />
+            <img src="/logo.png" alt="Motobikeshop.lk Logo" class="h-10 w-auto rounded-lg" />
             <div>
-              <h3 class="text-lg font-display font-bold text-white">JL Racing</h3>
-              <p class="text-xs text-jl-green">Kurunegala</p>
+              <h3 class="text-lg font-display font-bold text-white">Motobikeshop.lk</h3>
+              <p class="text-xs text-jl-green">Wellampitiya</p>
             </div>
           </div>
           <p class="text-sm text-gray-400">
-            Your trusted partner for premium motorcycles in Sri Lanka. Making history, one ride at a
-            time.
+            We buy & sell all kinds of motorcycles in Sri Lanka. Brand new 0-mileage & certified
+            used bikes.
           </p>
         </div>
 
@@ -24,7 +24,7 @@
             <li>
               <router-link
                 to="/"
-                class="text-gray-400 hover:text-ktm-orange transition-colors text-sm"
+                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
               >
                 Home
               </router-link>
@@ -32,7 +32,7 @@
             <li>
               <router-link
                 to="/about"
-                class="text-gray-400 hover:text-ktm-orange transition-colors text-sm"
+                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
               >
                 About Us
               </router-link>
@@ -40,7 +40,7 @@
             <li>
               <router-link
                 to="/inventory"
-                class="text-gray-400 hover:text-ktm-orange transition-colors text-sm"
+                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
               >
                 Inventory
               </router-link>
@@ -48,7 +48,7 @@
             <li>
               <router-link
                 to="/services"
-                class="text-gray-400 hover:text-ktm-orange transition-colors text-sm"
+                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
               >
                 Services
               </router-link>
@@ -56,7 +56,7 @@
             <li>
               <router-link
                 to="/test-ride"
-                class="text-gray-400 hover:text-ktm-orange transition-colors text-sm"
+                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
               >
                 Book Test Ride
               </router-link>
@@ -64,7 +64,7 @@
             <li>
               <router-link
                 to="/contact"
-                class="text-gray-400 hover:text-ktm-orange transition-colors text-sm"
+                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
               >
                 Contact
               </router-link>
@@ -76,10 +76,11 @@
         <div>
           <h4 class="text-white font-semibold mb-4">Our Brands</h4>
           <ul class="space-y-2">
-            <li class="text-ktm-orange text-sm">KTM</li>
-            <li class="text-ktm-orange text-sm">Kawasaki</li>
-            <li class="text-ktm-orange text-sm">Yamaha</li>
-            <li class="text-ktm-orange text-sm">Triumph</li>
+            <li class="text-jl-green text-sm">KTM</li>
+            <li class="text-jl-green text-sm">Kawasaki</li>
+            <li class="text-jl-green text-sm">Yamaha</li>
+            <li class="text-jl-green text-sm">Honda</li>
+            <li class="text-jl-green text-sm">Suzuki</li>
           </ul>
         </div>
 
@@ -88,25 +89,27 @@
           <h4 class="text-white font-semibold mb-4">Contact Info</h4>
           <ul class="space-y-3">
             <li class="flex items-start space-x-2">
-              <MapPin class="w-4 h-4 text-ktm-orange mt-0.5 flex-shrink-0" />
-              <span class="text-gray-400 text-sm">No. 47, Ragama Road, Welisara</span>
+              <MapPin class="w-4 h-4 text-jl-green mt-0.5 flex-shrink-0" />
+              <span class="text-gray-400 text-sm">
+                No. 369/c Avissawella Road, Wellampitya, Sri Lanka
+              </span>
             </li>
             <li class="flex items-center space-x-2">
-              <Phone class="w-4 h-4 text-ktm-orange flex-shrink-0" />
+              <Phone class="w-4 h-4 text-jl-green flex-shrink-0" />
               <a
-                href="tel:+94771234567"
-                class="text-gray-400 hover:text-ktm-orange transition-colors text-sm"
+                href="tel:+94740805786"
+                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
               >
-                +94 77 123 4567
+                074 080 5786
               </a>
             </li>
             <li class="flex items-center space-x-2">
-              <Mail class="w-4 h-4 text-ktm-orange flex-shrink-0" />
+              <Mail class="w-4 h-4 text-jl-green flex-shrink-0" />
               <a
-                href="mailto:info@primeracingwelisara.lk"
-                class="text-gray-400 hover:text-ktm-orange transition-colors text-sm"
+                href="mailto:info@motobikeshop.lk"
+                class="text-gray-400 hover:text-jl-green transition-colors text-sm"
               >
-                info@primeracingwelisara.lk
+                info@motobikeshop.lk
               </a>
             </li>
           </ul>
@@ -118,7 +121,7 @@
         class="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4"
       >
         <p class="text-gray-500 text-sm text-center md:text-left">
-          © {{ currentYear }} JL Racing Kurunegala. All rights reserved.
+          © {{ currentYear }} Motobikeshop.lk. All rights reserved.
         </p>
 
         <!-- Social Links -->
@@ -153,22 +156,22 @@ const socialLinks = [
   {
     name: 'Facebook',
     icon: Facebook,
-    url: 'https://facebook.com/primeracingwelisara',
+    url: 'https://facebook.com/motobikeshop.lk',
   },
   {
     name: 'Instagram',
     icon: Instagram,
-    url: 'https://instagram.com/primeracingwelisara',
+    url: 'https://instagram.com/motobikeshop.lk',
   },
   {
     name: 'Twitter',
     icon: Twitter,
-    url: 'https://twitter.com/primeracingwel',
+    url: 'https://twitter.com/motobikeshoplk',
   },
   {
     name: 'YouTube',
     icon: Youtube,
-    url: 'https://youtube.com/@primeracingwelisara',
+    url: 'https://youtube.com/@motobikeshoplk',
   },
 ];
 </script>

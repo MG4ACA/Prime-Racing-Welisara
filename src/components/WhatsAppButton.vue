@@ -38,7 +38,7 @@ import { onMounted, ref } from 'vue';
 const whatsappBtn = ref(null);
 
 // WhatsApp number (format: country code + number without + or spaces)
-const whatsappNumber = '94771234567';
+const whatsappNumber = '94740805786';
 const message = encodeURIComponent("Hi! I'm interested in learning more about your motorcycles.");
 
 const handleClick = () => {
